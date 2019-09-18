@@ -3,12 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Register</title>
-        <h1>Register for our newsletter!</h1>
     </head>
     <body>
+        <h1>Register for our newsletter!</h1>
         <form method="POST" action="https://www.elformo.com/forms/973e5238-ba31-47e8-9fa6-a5ccbd5c0277">
             <label for="username">Username:</label>
-            <input id="username" type="text" name="username" placeholder="username" required>
+            <input id="username" type="text" name="username" placeholder="username" autofocus required>
             <br>
             <br>
             <label for="email">Email:</label>
@@ -23,7 +23,8 @@
             <input id="conpassword" type="password" name="conpassword" placeholder="Enter your password" required>
             <br>
             <br>
-            <input name="newsletter_signup" value="true" type="checkbox" checked> Sign Me Up For The Newsletter!
+            <input id="signup" name="signup" value="true" type="checkbox" checked>
+            <label for="signup"> Sign Me Up For The Newsletter!</label>
             <br>
             <br>
             <button type="submit">Create New Account!</button>
