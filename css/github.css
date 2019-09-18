@@ -1,17 +1,54 @@
 #topnav {
     background-color: black;
+    font-size: 14px;
 }
 #greybox {
-    border: 1px solid black;
+    border: 1px;
     height: 50px;
     padding: 10px;
     background-color: #F0F0F0;
     position: relative;
 }
 
+.link:hover {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    text-decoration: red overline;
+}
+#greybox1 {
+    border: 1px;
+    height: 20px;
+    padding: 10px;
+    background-color: #F0F0F0;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+#whitebox {
+    border: 1px solid gray;
+    height: 50px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+a:visited { text-decoration: none; color:black; }
+
+
+
+
+
+
 #foot1 {
     float:left;
+    font-size: 12px
 }
 #foot2 {
     float:right;
+    font-size: 12px;
 }
