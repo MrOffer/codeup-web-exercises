@@ -1,0 +1,29 @@
+#lfd {
+    float: right;
+}
+
+#date {
+    float: right;
+}
+
+#tarlogo {
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+   text-align: center;
+}
+h6 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+
+#prptyadd {
+    width: 200px;
+}

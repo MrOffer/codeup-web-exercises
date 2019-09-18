@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lease Application</title>
+        <link rel="stylesheet" href="css/leaseapp.css">
+    </head>
+    <body>
+    <form method="POST">
+        <input id="date" type="datetime-local" name="date">
+        <label id="lfd" for="date">Received on:</label>
+    </form>
+    <br>
+    <br>
+    <img id="tarlogo" src="img/tar_logo.jpg" alt="tar logo">
+    <h1>Residential Lease Application</h1>
+    <h6>USE OF THIS FORM WHO ARE NOT MEMBERS OF THE TEXAS ASSOCIATION OF REALTORS® IS NOT AUTHORIZED</h6>
+    <h6>©Texas Association Of Realtors®, Inc 2007</h6>
+    <h2>Each occupant and co-occupant 18 years or older must submit a seperate application.</h2>
+    <hr>
+    <form method="POST">
+        <label id="lbprpty" for="prptyadd">Property Address:</label>
+        <input id="prptyadd" name="addr" placeholder="Enter the property address" required type="text">
+        <label id="mid" for="amid">Anticipated Move-In Date:</label>
+        <input id="amid" type="date" name="date">
+        <label id="mrent" for="rent">Monhtly Rent $</label>
+        <input id="rent" type="text" name="mnthlyrent">
+        <label id="scrdep" for="dep">Security Deposit $</label>
+        <input id="dep" type="text" name="scdep">
+        <br>
+
+    </form>
+
+
+    </body>
+</html>
