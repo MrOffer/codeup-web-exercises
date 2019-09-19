@@ -18,7 +18,7 @@
     <h6>©Texas Association Of Realtors®, Inc 2007</h6>
     <h2>Each occupant and co-occupant 18 years or older must submit a seperate application.</h2>
     <hr>
-    <form method="POST">
+    <form id="app" method="POST">
         <label id="lbprpty" for="prptyadd">Property Address:</label>
         <input id="prptyadd" name="addr" placeholder="Enter the property address" required type="text">
         <label id="mid" for="amid">Anticipated Move-In Date:</label>
@@ -28,6 +28,75 @@
         <label id="scrdep" for="dep">Security Deposit $</label>
         <input id="dep" type="text" name="scdep">
         <br>
+        <h3>Applicant was referred to Landlord by:</h3>
+        <input id="realtor" type="checkbox" name="how" value="a" checked>
+        <label for=realtor>Real estate agent</label>
+        <label id="rename" for="rname"></label>
+        <input id="rname" type="text" name="rnamet" placeholder="Agent Name">
+        <label id="renum" for="rnum"></label>
+        <input id="rnum" type="text" name="rnamet" placeholder="Phone Number">
+        <input id="news" type="checkbox" name="how" value="b">
+        <label for="news">Newspaper</label>
+        <input id="ia" type="checkbox" name="how" value="c">
+        <label for="ia">Internet</label>
+        <input id="sign" type="checkbox" name="how" value="c">
+        <label for="sign">Sign</label>
+        <input id="other" type="checkbox" name="how" value="d">
+        <label for="other">Other</label>
+        <label id="oth" for="othe"></label>
+        <input id="othe" type="text" name="othr" placeholder="other">
+        <br>
+        <br>
+        <label id="appname" for="applname">Applicant Name:</label>
+        <input id="applname" name="name" placeholder="First, Middle, Last" required type="text">
+        <label id="fln" for="frln">Applicant's Former Last Name:</label>
+        <input id="frln" name="lname" placeholder="Maiden or Married" required type="text">
+        <label id="aemail" for="email">Email:</label>
+        <input id="email" name="emal" placeholder="Email" type="text" required>
+        <br>
+        <label id="hphone" for="homphone">Home Phone #:</label>
+        <input id="homphone" name="homephone" placeholder="###-###-####" type="text" required>
+        <label id="workphone" for="wphone">Work Phone #:</label>
+        <input id="wphone" name="emal" placeholder="###-###-####l" type="text">
+        <label id="cphone" for="mphone">Mobile Phone #:</label>
+        <input id="mphone" name="emal" placeholder="###-###-####" type="text">
+        <br>
+        <label id="ss" for="ssn">Social Security #:</label>
+        <input id="ssn" name="ssnum" placeholder="###-##-####" type="text" required>
+        <label id="DL" for="dln">Driver's License #:</label>
+        <input id="dln" name="dlnum" type="text" required>
+        <label id="dls" for="state">D.L. State:</label>
+        <input id="state" name="dlst" placeholder="TX" type="text" required>
+        <br>
+        <label id="daob" for="dob">Date of Birth:</label>
+        <input id="dob" name="adob"  type="date" required>
+        <label id="height" for="hgt">Height:</label>
+        <input id="hgt" name="hegt" placeholder="#'#" type="text" required>
+        <label id="weight" for="wgt">Weight:</label>
+        <input id="wgt" name="wegt" placeholder="###" type="text" required>
+        <label id="eyclr" for="eclr">Eye Color:</label>
+        <input id="eclr" name="eyeclr" type="text" required>
+        <br>
+        <label id="hrclr" for="hclr">Hair Color:</label>
+        <input id="hclr" name="haclr" type="text" required>
+        <label id="msta" for="ms">Marital Status:</label>
+        <input id="ms" name="mas" type="text" required>
+        <label id="cit" for="ci">Citizenship:</label>
+        <input id="ci" name="citz" type="text" placeholder="USA" required>
+        <br>
+        <h4>Emergency Contact:</h4>
+        <label id="emname" for="ename">Name:</label>
+        <input id="ename" name="emrname" placeholder="First, Middle, Last" required type="text">
+        <label id="eaddr" for="eadd">Address:</label>
+        <input id="eadd" name="emadd" placeholder="First, Middle, Last" required type="text">
+        <label id="ememail" for="eemail">Email:</label>
+        <input id="eemail" name="ememal" placeholder="Email" type="text" required>
+        <label id="emphone" for="ephone">Phone #:</label>
+        <input id="ephone" name="emephone" placeholder="###-###-####" type="text" required>
+        <br>
+        <h4>Name all other persons who will occupy the property:</h4>
+        <label id="oname1" for="ocname1">Name:</label>
+        <input id="ocname1" type="text" >
 
     </form>
 

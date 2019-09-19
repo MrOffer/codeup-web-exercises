@@ -23,7 +23,13 @@ h6 {
 h2 {
     text-align: center;
 }
-
+#app {
+    align-items: center;
+}
 #prptyadd {
     width: 200px;
+}
+
+#applname {
+    width: 250px;
 }
