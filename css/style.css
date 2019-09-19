@@ -1,4 +1,47 @@
 .fancy-header {
-    color: purple; /* single line comment */
+    color: Purple;
     text-decoration: underline;
+    text-align: center;
+}
+h1 {
+    text-decoration: underline;
+    color: brown;
+    text-align: center;
+}
+body {
+    background-color: lightgrey;
+    background-image: url("../img/BluePolygons.png");
+    background-size: cover;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    text-align: center;
+}
+
+#values, #vision {
+    list-style-type: circle;
+    align-items: center;
+}
+
+.bord {
+    border: 1px solid white;
+    text-align: center;
+    color: white;
+}
+table {
+    margin-left:auto;
+    margin-right:auto;
+}
+ul, ol {
+    display: inline-block;
+}
+
+a:hover {
+    color: deepskyblue;
+    font-weight: bold;
+}
+a:link {
+    color:green;
+}
+a:visited {
+    color:green;
 }

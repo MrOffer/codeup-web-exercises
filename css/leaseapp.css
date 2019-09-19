@@ -23,8 +23,8 @@ h6 {
 h2 {
     text-align: center;
 }
-#app {
-    align-items: center;
+form {
+    align-self: center;
 }
 #prptyadd {
     width: 200px;
