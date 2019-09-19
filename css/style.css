@@ -7,14 +7,17 @@ h1 {
     text-decoration: underline;
     color: brown;
     text-align: center;
+    margin-bottom: 5px;
 }
 body {
     background-color: lightgrey;
     background-image: url("../img/BluePolygons.png");
     background-size: cover;
-    font-family: "Courier New", monospace;
+    font-family: 'Share Tech', sans-serif;
     font-weight: bold;
     text-align: center;
+    background-attachment: fixed;
+    font-size: 1.5em;
 }
 
 #values, #vision {
@@ -25,7 +28,7 @@ body {
 .bord {
     border: 1px solid white;
     text-align: center;
-    color: white;
+    padding: 15px;
 }
 table {
     margin-left:auto;
@@ -33,15 +36,31 @@ table {
 }
 ul, ol {
     display: inline-block;
+    margin-top: 3px;
+    padding: 3px;
+    border: 3px;
+}
+#nb {
+    background-color: silver;
+    font-size: 2em;
+    color: aqua;
+    border: 1px solid black;
+}
+#nb:hover {
+    background-color: blue;
 }
 
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: blue;
+}
 a:hover {
-    color: deepskyblue;
+    color: red;
     font-weight: bold;
 }
-a:link {
-    color:green;
-}
-a:visited {
-    color:green;
+hr {
+
 }
