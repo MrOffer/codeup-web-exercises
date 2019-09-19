@@ -8,9 +8,10 @@ h1 {
     color: brown;
     text-align: center;
     margin-bottom: 5px;
+    text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
 }
 body {
-    background-color: lightgrey;
+    background-color: lightsteelblue;
     background-image: url("../img/BluePolygons.png");
     background-size: cover;
     font-family: 'Share Tech', sans-serif;
@@ -18,11 +19,18 @@ body {
     text-align: center;
     background-attachment: fixed;
     font-size: 1.5em;
+    text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
+    background-blend-mode: overlay ;
 }
 
 #values, #vision {
     list-style-type: circle;
     align-items: center;
+}
+hr {
+    height: 5px;
+    background-color: silver;
+    border: solid gray;
 }
 
 .bord {
@@ -44,7 +52,8 @@ ul, ol {
     background-color: silver;
     font-size: 2em;
     color: aqua;
-    border: 1px solid black;
+    border: 1px solid gray;
+    text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
 }
 #nb:hover {
     background-color: blue;
@@ -60,7 +69,4 @@ a:visited {
 a:hover {
     color: red;
     font-weight: bold;
-}
-hr {
-
 }
