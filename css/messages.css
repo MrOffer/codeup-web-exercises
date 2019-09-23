@@ -1,3 +1,8 @@
+:root{
+    --bg-info: #CDDEFF;
+    --fnt-col: #514ea5;
+}
+
 body, html {
     height: 100%;
     width: 100%;
@@ -7,23 +12,24 @@ body, html {
 }
 .message {
     border: 1px solid lightgrey;
-    margin: 10px;
-    padding: 10px;
+    margin: .5em auto;
+    padding: .25em;
     width: 80%;
+    border-radius: .3em;
 }
 .message-info {
-    background-color: lightblue;
-    color: rebeccapurple;
+    background-color: var(--bg-info);
+    color: var(--fnt-col);
 }
 .message-success{
-    background-color: lightgreen;
-    color: green;
+    background-color: #d6f1dc;
+    color: #42794d;
 }
 .message-warning {
-    background-color: lightyellow;
-    color: goldenrod;
+    background-color: #fcface;
+    color: #42794d;
 }
 .message-error {
     background-color: lightcoral;
-    color: darkred;
+    color: #701a29;
 }
