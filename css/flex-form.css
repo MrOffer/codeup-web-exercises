@@ -51,11 +51,17 @@ body {
 
 /*flex solution*/
 .cover {
-  display: flex;/* flex container */
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex container */
 }
 .flex-form {
-    /* flex items */
+    display: flex;
+    justify-content: center;
+    align-items: center;/* flex items */
 }
 .destination {
-    /* bigger item */
+    justify-content: center;
+    align-items: center;/* bigger item */
 }
