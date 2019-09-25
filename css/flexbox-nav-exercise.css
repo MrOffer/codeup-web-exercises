@@ -1,16 +1,46 @@
-body {
+* {
     box-sizing: border-box;
 }
-a {
-    display: inline-block;
+body {
+    margin: 0;
+}
+nav {
+    background: darkgray;
+}
+ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+
 }
-a:link {
-    color: black;
+
+nav a {
+    text-decoration: none;
+    color: Black;
+    font-family: 'Work Sans', sans-serif;
+    display: inline-block;
+    width: 100%;
+    padding: 1em;
 }
-a:visited {
-    color: black;
-}
-a:hover {
+nav a:hover {
     color: blue;
+}
+#logo {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    padding: .2em;
+}
+img {
+    height: 20px;
+    width: 25px;
+}
+nav ul li:nth-child(5) {
+    margin: 0 auto;
+}
+nav a:hover img {
+  height: 30px;
+    width: 35px;
 }
