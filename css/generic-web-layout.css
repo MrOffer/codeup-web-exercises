@@ -6,29 +6,95 @@ body {
 }
 main {
     display: grid;
-    grid-template-columns: repeat(8, 100%);
-    grid-template-rows: repeat(30, 100%);
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(17, 1fr);
 }
-ul {
-    margin: 0;
-    padding: 0;
+.nav {
+    margin-top: 0;
+    margin-bottom: 0;
     grid-area: 1 / 1 / 2 / 9;
     display: flex;
-    list-style: none;
     background-color: black;
     color: white;
     align-items:  center;
 }
+.menu {
+    grid-area: 2 / 1 / 18 / 2;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 0;
+}
+.head {
+    grid-area: 2 / 2 / 3 / 6;
+}
+.p1 {
+    grid-area: 3 / 2 / 5 / 6;
+}
+.head1 {
+    grid-area: 5/ 2 / 6 / 6;
+}
+.p2 {
+    grid-area: 6 / 2 / 8 / 6;
+}
+.head2 {
+    grid-area: 8 / 2 / 9 / 6;
+}
+.p3 {
+    grid-area: 9 / 2 / 11/ 6;
+}
 li {
-    padding-left: 10px;
-}
-
-a:visited {
-    color: white;
-}
-a:link {
+    list-style: none;
     text-decoration: none;
 }
-a:hover {
-    background-color: darkgray;
+.foot {
+    grid-area: -4 / 2 / -2 / 9;
+    background-color: #848487;
+    color: white;
+}
+.bot {
+    grid-area: -2 / 2 / -1 / 9;
+    background-color: black;
+    color: white;
+}
+.smenu:link {
+    color: black;
+    text-decoration: none;
+}
+.tnav:link {
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+}
+.num:link  {
+    color: black;
+    text-decoration: none;
+}
+h2 {
+    color: mediumseagreen;
+}
+.ad1 {
+    grid-area: 2 / 7 / 3 / 9;
+}
+.ad2 {
+    grid-area: 3 / 7 / 5 / 9;
+}
+
+.ad3 {
+    grid-area: 7 / 7 / 8 / 9;
+}
+.ad4 {
+    grid-area: 8 / 7 / 10 / 9;
+}
+.ad5 {
+    grid-area: 11/ 7 / 12 / 9;
+}
+.ad6 {
+    grid-area: 12/ 7 / 14 / 9;
+}
+.page {
+    grid-area: -5 / 4 / -4 / 6;
+    display: flex;
+    justify-content: space-around;
 }

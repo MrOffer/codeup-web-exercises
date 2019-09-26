@@ -8,8 +8,8 @@ main {
     margin: 0;
     background: black;
     display: grid;
-    grid-template-rows: repeat(5, 165%);
-    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
 }
 main div {
