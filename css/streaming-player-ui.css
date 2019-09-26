@@ -12,8 +12,8 @@ body {
 
 .wrapper {
     display: grid;/* TODO: make the wrapper a grid container */
-    grid-template-columns: 20% 400px 400px 400px 20%;/* TODO: define five columns where the middle three columns are 400px and the outer columns fill the remaining space */
-    grid-gap: 2em;/* TODO: add a gap of 1em around all grid items */
+    grid-template-columns: 1fr 400px 400px 400px 1fr;/* TODO: define five columns where the middle three columns are 400px and the outer columns fill the remaining space */
+    grid-gap: 1em;/* TODO: add a gap of 1em around all grid items */
     /* no row properties are needed */
     height: 100vh;/* TODO: the height of the wrapper should be 100 viewport height units */
 }
@@ -26,7 +26,7 @@ ul {
 
 header {
     background: purple;
-    grid-area: 1 / 2 / 2 / 4;/* TODO: define the grid area of header such that it takes up the first row and middle three columns */
+    grid-area: 1 / 2 / 2 / 5;/* TODO: define the grid area of header such that it takes up the first row and middle three columns */
 }
 
 nav {
@@ -35,8 +35,8 @@ nav {
 
 main {
     grid-area: 2 / 3 / 3 / 5;/* TODO: define the grid area of main such that it takes up the columns 3 and 4 of the second row  */
-    display: inline-grid;/* TODO: make main a grid container as well */
-    grid-template-columns: repeat(3, 33.33%);
+    display: grid;/* TODO: make main a grid container as well */
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 1em;/* TODO: define main to contain three columns that together take up equally the full width of main and have a 1em gap between grid items */
     overflow: auto;
 }
@@ -107,7 +107,7 @@ nav a:hover {
     height: 200px;
     border-radius: 10px;
     position: relative;
-    /* TODO: add a property that causes a transition of the border from lightgrey to near black in .2 seconds */
+    transition: .2s/* TODO: add a property that causes a transition of the border from lightgrey to near black in .2 seconds */
 }
 
 .card:hover {
