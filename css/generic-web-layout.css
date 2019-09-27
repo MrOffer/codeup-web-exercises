@@ -7,16 +7,17 @@ body {
 main {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(22, 1fr);
+    grid-template-rows: repeat(21, 3em);
 }
 .nav {
+    padding: 0;
     margin-top: 0;
     margin-bottom: 0;
     grid-area: 1 / 1 / 2 / 10;
     display: flex;
     background-color: black;
     color: white;
-    align-items:  center;
+    align-items: center;
 }
 .menu {
     grid-area: 2 / 1 / 23 / 2;
@@ -24,6 +25,7 @@ main {
     display: flex;
     flex-direction: column;
     margin-top: 0;
+
 }
 .head {
     grid-area: 3 / 2 / 4 / 6;
@@ -48,12 +50,12 @@ li {
     text-decoration: none;
 }
 .foot {
-    grid-area: 20 / 2 / 22 / 10;
+    grid-area: 19 / 2 / 21 / 10;
     background-color: #848487;
     color: white;
 }
 .bot {
-    grid-area: 22 / 2 / 23 / 10;
+    grid-area: 21 / 2 / 22 / 10;
     background-color: black;
     color: white;
 }
@@ -89,41 +91,41 @@ h2 {
 }
 
 .ad3 {
-    grid-area: 9 / 7 / 10 / 9;
+    grid-area: 8 / 7 / 9 / 9;
     border: 1px solid lightgrey;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .ad4 {
-    grid-area: 11 / 7 / 13 / 9;
+    grid-area: 10 / 7 / 12 / 9;
     border: 1px solid lightgrey;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .ad5 {
-    grid-area: 14/ 7 / 15 / 9;
+    grid-area: 13/ 7 / 14 / 9;
     border: 1px solid lightgrey;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .ad6 {
-    grid-area: 16/ 7 / 18 / 9;
+    grid-area: 15/ 7 / 17 / 9;
     border: 1px solid lightgrey;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .page {
-    grid-area: 19 / 4 / 20 / 6;
+    grid-area: 18 / 4 / 19 / 6;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .smenu {
-    margin: 1em;
-    padding: 5px;
+   display: flex;
+    padding: 1em;
 }
 h2 {
     margin-left: 1em;
@@ -138,7 +140,12 @@ p {
 .tnav:hover {
     background-color: darkgray;
 }
-.smenu:hover {
-    color: white;
-    background-color: black;
+
+.tnav {
+    padding: 3em;
+}
+.num {
+    display: flex;
+    padding: 10px;
+    font-size: 16px;
 }
