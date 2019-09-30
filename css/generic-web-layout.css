@@ -5,9 +5,10 @@ body {
     margin: 0;
 }
 main {
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(21, 3em);
+    grid-template-rows: repeat(21, 1fr);
 }
 .nav {
     padding: 0;
@@ -141,9 +142,7 @@ p {
     background-color: darkgray;
 }
 
-.tnav {
-    padding: 3em;
-}
+
 .num {
     display: flex;
     padding: 10px;
