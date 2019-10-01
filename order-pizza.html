@@ -31,7 +31,7 @@
                 </form>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Sign Up</a>
+                <a class="nav-link" id="signup" href="#">Sign Up</a>
             </li>
         </ul>
 
@@ -43,10 +43,9 @@
         <h1 class="display-4">Welcome To Pizza World!</h1>
     </div>
 
-<div>
-    <h2>Build your own pizza!</h2>
-</div>
-
+    <div>
+        <h2>Build your own pizza!</h2>
+    </div>
     <ul class="nav nav-tabs">
         <li class="nav-item">
             <a class="nav-link active" href="#">Size and crust</a>
@@ -59,7 +58,58 @@
         </li>
     </ul>
 
-
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            Choose size and crust
+        </div>
+        <div class="card-body">
+            <div class="card" style="width: 36rem;">
+                <div class="card-header">
+                    Hand Tossed
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+                    <li class="list-group-item"><div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                            Small (10")
+                        </label>
+                    </div></li>
+                    <li class="list-group-item"><div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                            Medium (12")
+                        </label>
+                    </div></li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="card" style="width: 36rem;">
+                    <div class="card-header">
+                        Crispy and thin
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Thin enough for optimum crispy to crunch ratio.</li>
+                        <li class="list-group-item"><div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios4">
+                                Medium (12")
+                            </label>
+                        </div></li>
+                        <li class="list-group-item"><div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option2">
+                            <label class="form-check-label" for="exampleRadios3">
+                                Large (14")
+                            </label>
+                        </div></li>
+                    </ul>
+                </div>
+                <div class="card-footer text-right">
+                    <a href="#" class="btn btn-primary">Next Step</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
