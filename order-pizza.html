@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title><!-- TODO: put your title here --></title>
+    <title>Pizza World</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="css/custom.css" rel="stylesheet">
     <!-- Your custom styles go here -->
@@ -24,19 +24,41 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Menu</a>
             </li>
+            <li>
+                <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Zip Code" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you!</button>
+                </form>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Sign Up</a>
+            </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Zip Code" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you!</button>
-        </form>
+
     </div>
 </nav>
+
 <main class="maincontiner">
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4">Welcome to Pizza World!</h1>
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome To Pizza World!</h1>
     </div>
-</div><!-- Main page content -->
+
+<div>
+    <h2>Build your own pizza!</h2>
+</div>
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Size and crust</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Cheese and sauce</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Toppings</a>
+        </li>
+    </ul>
+
 
 </main>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
