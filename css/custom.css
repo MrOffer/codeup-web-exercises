@@ -6,3 +6,6 @@
     opacity: .6;
     text-align: center;
 }
+i:link {
+    color: grey;
+}
