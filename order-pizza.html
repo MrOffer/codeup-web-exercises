@@ -46,17 +46,17 @@
     </div>
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a class="nav-link active" href="#crust"><span class="badge badge-pill badge-secondary">1</span>Size and crust</a>
+            <a class="nav-link"  data-toggle="collapse" role="button" aria-expanded="true" aria-controls="crust" href="#crust"><span class="badge badge-pill badge-secondary">1</span>Size and crust</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#cheese"><span class="badge badge-pill badge-secondary">2</span>Cheese and sauce</a>
+            <a class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="cheese" href="#cheese"><span class="badge badge-pill badge-secondary">2</span>Cheese and sauce</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#toppings"><span class="badge badge-pill badge-secondary">3</span>Toppings</a>
+            <a class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="toppings" href="#toppings"><span class="badge badge-pill badge-secondary">3</span>Toppings</a>
         </li>
     </ul>
 
-    <div class="card" id="crust">
+    <div class="card crust collapse multi-collapse" id="crust">
         <div class="card-header bg-primary text-white">
             Choose size and crust
         </div>
@@ -104,12 +104,12 @@
                     </ul>
                 </div>
                     <div class="card-footer text-right">
-                        <a href="#cheese" class="btn btn-primary">Next Step</a>
+                        <a href="#cheese" class="btn btn-primary" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="cheeae">Next Step</a>
                     </div>
             </div>
     </div>
     <br>
-    <div class="card" id="cheese">
+    <div class="card cheese collapse multi-collapse" id="cheese">
         <div class="card-header bg-primary text-white">
             Choose cheese and sauce
         </div>
@@ -168,13 +168,15 @@
                 </form>
             </div>
             <div class="card-footer text-right">
-                <a href="#crust" class="btn btn-primary">Previous Step</a>
-                <a href="#toppings" class="btn btn-primary">Next Step</a>
+                <div class="btn-group">
+                    <a href="#crust" class="btn btn-primary" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="crust">Previous Step</a>
+                    <a href="#toppings" class="btn btn-primary"data-toggle="collapse" role="button" aria-expanded="false" aria-controls="toppings">Next Step</a>
+                </div>
             </div>
         </div>
     </div>
     <br>
-    <div class="card" id="toppings">
+    <div class="card toppings collapse multi-collapse" id="toppings">
         <div class="card-header bg-primary text-white">
             Choose Toppings
         </div>
