@@ -39,27 +39,27 @@
         </form>
     </div>
 </nav>
-<div class="container">
+
+<div class="container-fluid d-none d-lg-block">
     <div class="jumbotron jumbotron-fluid">
-        <div class="container">
             <h1 class="display-4">Welcome to Pizza World!</h1>
-        </div>
     </div>
     <h2>Build your own pizza!</h2>
+</div>
     <br>
     <hr>
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a class="nav-link active" href="#"><span class="badge badge-secondary">1</span>Size and crust</a>
+            <a class="nav-link active" href="#crust"><span class="badge badge-secondary">1</span>Size and crust</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#"><span class="badge badge-secondary">2</span>Cheese and sauce</a>
+            <a class="nav-link" href="#cheese1"><span class="badge badge-secondary">2</span>Cheese and sauce</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#"><span class="badge badge-secondary">3</span>Toppings</a>
+            <a class="nav-link" href="#toppings"><span class="badge badge-secondary">3</span>Toppings</a>
         </li>
     </ul>
-    <div class="card">
+    <div class="card" id="crust">
         <h5 class="card-header">Choose size and crust</h5>
         <div class="card-body">
             <div class="card" style="width: 18rem;">
@@ -108,11 +108,11 @@
                 </ul>
             </div>
             <hr>
-            <a href="#" class="btn btn-primary">Next step</a>
+            <a href="#cheese1" class="btn btn-primary">Next step</a>
         </div>
     </div>
-    <!--Second card for choose cheese-->
-    <div class="card">
+
+    <div class="card" id="cheese1">
         <h5 class="card-header">Choose cheese and sauce</h5>
         <div class="card-body">
             <div class="card" style="width: 18rem;">
@@ -154,15 +154,14 @@
             </div>
             <div class="card-footer text-right">
                 <div class="btn-group" role="group" aria-label="Prev-Next-Step">
-                    <a href="" class="btn btn-primary"><i class="fa fa-chevron-left"></i> Previous Step</a>
-                    <a href="" class="btn btn-primary">Next Step <i class="fa fa-chevron-right"></i></a>
+                    <a href="#crust" class="btn btn-primary"><i class="fa fa-chevron-left"></i> Previous Step</a>
+                    <a href="#toppings" class="btn btn-primary">Next Step <i class="fa fa-chevron-right"></i></a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!--Toppings card -->
-    <div class="card">
+    <div class="card" id="toppings">
         <h5 class="card-header">Choose toppings</h5>
         <div class="card-body">
             <div class="card" style="width: 18rem;">
@@ -207,7 +206,6 @@
             </div>
             <hr>
             <a href="#" class="btn btn-primary">Checkout<i class="fas fa-shopping-cart"></i></a>
-
         </div>
     </div>
 </div>
