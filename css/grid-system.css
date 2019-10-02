@@ -144,7 +144,7 @@ a:hover {
 }
 
 hr {
-    border-top: 3px solid rgba(158, 158, 158, 0.19);
+    border-top: 3px solid grey;
 }
 
 .img-thumbnail {
@@ -192,7 +192,7 @@ hr {
 /*SM SCREEN - screen bigger than 767 */
 @media screen and (min-width:768px) {
     hr {
-        width: 55%;
+        width: 95%;
     }
 
 
@@ -209,7 +209,7 @@ hr {
 /*MED SCREEN - screen bigger than 991*/
 @media screen and (min-width:992px) {
     hr {
-        width: 92%;
+        width: 95%;
     }
 
 
@@ -245,7 +245,7 @@ hr {
 /*LARGE & XTRA LARGE - screen bigger than 1199*/
 @media screen and (min-width:1200px) {
     hr {
-        width:65%;
+        width:95%;
     }
 
     .first-img {
