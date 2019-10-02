@@ -1,11 +1,32 @@
 .jumbotron {
-    background: url("../img/pizza.png");
+    background-image: url("../img/pizza.png");
+    background-size: cover;
 }
-.display-4 {
-    background-color: whitesmoke;
-    opacity: .6;
+
+h1{
     text-align: center;
+    background-color: #DDDDDD;
+    opacity: 0.6;
 }
-i:link {
-    color: grey;
+
+.badge.badge-secondary{
+    border-radius: 60%;
+}
+
+.btn.btn-primary{
+    float: right;
+}
+
+.btn{
+    float: right;
+}
+
+h5.card-header{
+    color: white;
+    background-color: #007bff;
+}
+
+.container{
+    padding: 0;
+    width: 100%;
 }
