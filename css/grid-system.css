@@ -212,7 +212,9 @@ hr {
         width: 95%;
     }
 
-
+    .man {
+        height: 200px;
+    }
     .first-img {
         margin-left: 0;
     }
@@ -247,7 +249,9 @@ hr {
     hr {
         width:95%;
     }
-
+    .man {
+        height: 290px;
+    }
     .first-img {
         margin-left: 0;
     }
