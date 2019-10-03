@@ -1,4 +1,4 @@
-:root{
+:root {
     --bg-info: #CDDEFF;
     --fnt-col: #514ea5;
 }
@@ -10,6 +10,7 @@ body, html {
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
+
 .message {
     border: 1px solid lightgrey;
     margin: .5em auto;
@@ -17,18 +18,22 @@ body, html {
     width: 80%;
     border-radius: .3em;
 }
+
 .message-info {
     background-color: var(--bg-info);
     color: var(--fnt-col);
 }
-.message-success{
+
+.message-success {
     background-color: #d6f1dc;
     color: #42794d;
 }
+
 .message-warning {
     background-color: #fcface;
     color: #42794d;
 }
+
 .message-error {
     background-color: lightcoral;
     color: #701a29;

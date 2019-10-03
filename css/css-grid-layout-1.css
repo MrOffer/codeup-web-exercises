@@ -1,9 +1,11 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
 }
+
 main {
     height: 100vh;
     margin: 0;
@@ -13,26 +15,32 @@ main {
     grid-template-columns: repeat(4, 1fr);
 
 }
+
 main div {
     font-size: 1em;
     border: 3px solid white;
 }
+
 .head {
     grid-area: 1 / 1 / 2 / 5;
     background-color: gold;
 }
+
 .nav {
     grid-area: 2 / 1 / 5 / 2;
     background-color: gold;
 }
+
 .art {
     grid-area: 2 / 2 / 4 / 4;
     background-color: gold;
 }
+
 .ads {
     grid-area: 2 / 4 / 4 / 5;
     background-color: gold;
 }
+
 .foot {
     grid-area: 4 / 2 / 5 / 5;
     background-color: gold;

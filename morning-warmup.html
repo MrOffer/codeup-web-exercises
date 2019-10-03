@@ -9,31 +9,36 @@
 <p> These are my morning warmups:</p>
 <script>
     function sum(a, b) {
-    return a + b;
-}
-console.log(sum(3,5));
+        return a + b;
+    }
+
+    console.log(sum(3, 5));
 
     function tarea(a, b, c) {
         var parm = (a + b + c) / 2;
         var trarea = Math.sqrt(parm * (parm - a) * (parm - b) * (parm - c));
-            return trarea;
+        return trarea;
     }
-console.log(tarea(5, 6, 7));
+
+    console.log(tarea(5, 6, 7));
 
 
     function sayhi() {
         return "Hi";
     }
+
     console.log(sayhi());
 
     function hello(x) {
         return "Hello " + x + "!";
     }
-console.log(hello("David"));
+
+    console.log(hello("David"));
 
     function first(arr) {
         return arr[0];
     }
+
     console.log(first(["hi", "hello"]))
 
     function ptarea(a, b, c) {
@@ -41,25 +46,30 @@ console.log(hello("David"));
         var ptrarea = Math.sqrt(parm * (parm - a) * (parm - b) * (parm - c));
         return ptrarea;
     }
-     function f(x, y, z) {
-         return x + " " + y + " " + z;
-     }
-     console.log(f(["bat", "elephant"], [1 , 2], [5, 6]));
+
+    function f(x, y, z) {
+        return x + " " + y + " " + z;
+    }
+
+    console.log(f(["bat", "elephant"], [1, 2], [5, 6]));
 
     function uppercase(x) {
         return x.toUpperCase();
     }
+
     console.log(uppercase("a"));
 
     function areaOfCircle(x) {
-    var r = x / 2;
-    return Math.pi * (r * r);
+        var r = x / 2;
+        return Math.pi * (r * r);
     }
+
     console.log(areaOfCircle(10));
 
     function p(x, y, z, a) {
-    return x + y + z + a;
+        return x + y + z + a;
     }
+
     console.log(p(3, 2, 5, 7));
 
 </script>

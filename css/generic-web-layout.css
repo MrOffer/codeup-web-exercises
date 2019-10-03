@@ -1,15 +1,18 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
 }
+
 main {
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(21, 1fr);
 }
+
 .nav {
     padding: 0;
     margin-top: 0;
@@ -20,6 +23,7 @@ main {
     color: white;
     align-items: center;
 }
+
 .menu {
     grid-area: 2 / 1 / 23 / 2;
     background-color: whitesmoke;
@@ -28,54 +32,68 @@ main {
     margin-top: 0;
 
 }
+
 .head {
     grid-area: 3 / 2 / 4 / 6;
 }
+
 .p1 {
     grid-area: 4 / 2 / 6 / 6;
 }
+
 .head1 {
     grid-area: 7 / 2 / 8 / 6;
 }
+
 .p2 {
     grid-area: 8 / 2 / 10/ 6;
 }
+
 .head2 {
     grid-area: 11 / 2 / 12 / 6;
 }
+
 .p3 {
     grid-area: 12 / 2 / 14/ 6;
 }
+
 li {
     list-style: none;
     text-decoration: none;
 }
+
 .foot {
     grid-area: 19 / 2 / 21 / 10;
     background-color: #848487;
     color: white;
 }
+
 .bot {
     grid-area: 21 / 2 / 22 / 10;
     background-color: black;
     color: white;
 }
+
 .smenu:link {
     color: black;
     text-decoration: none;
 }
+
 .tnav:link {
     color: white;
     text-decoration: none;
     padding: 1em;
 }
-.num:link  {
+
+.num:link {
     color: black;
     text-decoration: none;
 }
+
 h2 {
     color: mediumseagreen;
 }
+
 .ad1 {
     grid-area: 3 / 7 / 4 / 9;
     border: 1px solid lightgrey;
@@ -83,6 +101,7 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
 .ad2 {
     grid-area: 5 / 7 / 7 / 9;
     border: 1px solid lightgrey;
@@ -98,6 +117,7 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
 .ad4 {
     grid-area: 10 / 7 / 12 / 9;
     border: 1px solid lightgrey;
@@ -105,6 +125,7 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
 .ad5 {
     grid-area: 13/ 7 / 14 / 9;
     border: 1px solid lightgrey;
@@ -112,6 +133,7 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
 .ad6 {
     grid-area: 15/ 7 / 17 / 9;
     border: 1px solid lightgrey;
@@ -119,25 +141,31 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
 .page {
     grid-area: 18 / 4 / 19 / 6;
     display: flex;
     justify-content: space-evenly;
 }
+
 .smenu {
-   display: flex;
+    display: flex;
     padding: 1em;
 }
+
 h2 {
     margin-left: 1em;
 }
+
 p {
     margin-left: 1em;
 }
+
 .num:hover {
     color: white;
     background-color: black;
 }
+
 .tnav:hover {
     background-color: darkgray;
 }

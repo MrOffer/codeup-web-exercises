@@ -3,6 +3,7 @@
     text-decoration: underline;
     text-align: center;
 }
+
 h1 {
     text-decoration: underline;
     color: brown;
@@ -10,6 +11,7 @@ h1 {
     margin-bottom: 5px;
     text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
 }
+
 body {
     background-color: lightsteelblue;
     background-image: url("../img/BluePolygons.png");
@@ -20,13 +22,14 @@ body {
     background-attachment: fixed;
     font-size: 1.5em;
     text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
-    background-blend-mode: overlay ;
+    background-blend-mode: overlay;
 }
 
 #values, #vision {
     list-style-type: circle;
     align-items: center;
 }
+
 hr {
     height: 5px;
     background-color: silver;
@@ -38,16 +41,19 @@ hr {
     text-align: center;
     padding: 15px;
 }
+
 table {
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 ul, ol {
     display: inline-block;
     margin-top: 3px;
     padding: 3px;
     border: 3px;
 }
+
 #nb {
     background-color: silver;
     font-size: 2em;
@@ -55,6 +61,7 @@ ul, ol {
     border: 1px solid gray;
     text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
 }
+
 #nb:hover {
     background-color: blue;
 }
@@ -66,6 +73,7 @@ a:link {
 a:visited {
     color: blue;
 }
+
 a:hover {
     color: red;
     font-weight: bold;

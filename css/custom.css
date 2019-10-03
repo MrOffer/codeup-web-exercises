@@ -3,30 +3,30 @@
     background-size: cover;
 }
 
-h1{
+h1 {
     text-align: center;
     background-color: #DDDDDD;
     opacity: 0.6;
 }
 
-.badge.badge-secondary{
+.badge.badge-secondary {
     border-radius: 60%;
 }
 
-.btn.btn-primary{
+.btn.btn-primary {
     float: right;
 }
 
-.btn{
+.btn {
     float: right;
 }
 
-h5.card-header{
+h5.card-header {
     color: white;
     background-color: #007bff;
 }
 
-.container{
+.container {
     padding: 0;
     width: 100%;
 }
