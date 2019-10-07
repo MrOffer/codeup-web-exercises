@@ -5,15 +5,78 @@ console.log("Hello from external JavaScript");
 alert("Welcome to my website!");
 
 var userInput = prompt('What is your favorite color?');
-console.log('The user entered: ' + userInput);
-alert(userInput + " is my favorite color too!" );
+alert(userInput + " is my favorite color too!");
 
 var lilMermaidDays = parseInt(prompt('How many days would you like to keep Little Mermaid?'));
 var broBearDays = parseInt(prompt( 'How Many days would you like to keep Brother Bear?'));
 var herculesDays = parseInt(prompt( 'How Many days would you like to keep Hercules?'));
 var dailyFee = 3;
 var total =  (lilMermaidDays * dailyFee) + (broBearDays * dailyFee) + (herculesDays* dailyFee);
-alert("Your Total will be $" + total);
+alert("Your total will be $" + total);
+if (lilMermaidDays === 1) {
+    alert("Little Mermaid is due back on Tomorrow by 3pm")
+}
+if (lilMermaidDays === 2) {
+    alert("Little Mermaid is due back on Wednesday by 3pm")
+}
+if (lilMermaidDays === 3) {
+    alert("Little Mermaid is due back on Thursday by 3pm")
+}
+if (lilMermaidDays === 4) {
+    alert("Little Mermaid is due back on Friday by 3pm")
+}
+if (lilMermaidDays === 5) {
+    alert("Little Mermaid is due back on Saturday by 3pm")
+}
+if (lilMermaidDays === 6) {
+    alert("Little Mermaid is due back on Sunday by 3pm")
+}
+if (lilMermaidDays === 7) {
+    alert("Little Mermaid is due back on Next Monday by 3pm")
+}
+if (broBearDays === 1) {
+    alert("Brother Bear is due back on Tomorrow by 3pm")
+}
+if (broBearDays === 2) {
+    alert("Brother Bear is due back on Wednesday by 3pm")
+}
+if (broBearDays === 3) {
+    alert("Brother Bear is due back on Thursday by 3pm")
+}
+if (broBearDays === 4) {
+    alert("Brother Bear is due back on Friday by 3pm")
+}
+if (broBearDays === 5) {
+    alert("Brother Bear is due back on Saturday by 3pm")
+}
+if (broBearDays === 6) {
+    alert("Brother Bear is due back on Sunday by 3pm")
+}
+if (broBearDays === 7) {
+    alert("Brother Bear is due back on Next Monday by 3pm")
+}
+if (herculesDays === 1) {
+    alert("Hercules is due back on Tomorrow by 3pm")
+}
+if (herculesDays === 2) {
+    alert("Hercules is due back on Wednesday by 3pm")
+}
+if (herculesDays === 3) {
+    alert("Hercules is due back on Thursday by 3pm")
+}
+if (herculesDays === 4) {
+    alert("Hercules is due back on Friday by 3pm")
+}
+if (herculesDays === 5) {
+    alert("Hercules is due back on Saturday by 3pm")
+}
+if (herculesDays === 6) {
+    alert("Hercules is due back on Sunday by 3pm")
+}
+if (herculesDays === 7) {
+    alert("Hercules is due back on Next Monday by 3pm")
+}
+
 
 
 var googlePay = 400;
@@ -28,9 +91,9 @@ var totalPay = (gh * googlePay) + (ah * amazonPay) + (fh * facebookPay);
 alert("Your total pay is $" + totalPay);
 
 
-var fullClass = confirm("Is the class full?");
-var scheduleConflict = confirm("Is the a schedule conflict?");
-if (fullClass === false && scheduleConflict === false) {
+var fullClass = confirm("Is there room in the class?");
+var scheduleConflict = confirm("Is there a schedule conflict?");
+if (fullClass  && !scheduleConflict) {
     alert("Enrolled in Class");
 } else {
     alert("Not Enrolled");
@@ -38,12 +101,12 @@ if (fullClass === false && scheduleConflict === false) {
 
 
 
-var itemsBought = parseInt(prompt("How many Items are being purchased?"));
-var offerExpired = confirm("Is the Offer Valid?");
+var itemsBought = parseInt(prompt("How many items are being purchased?"));
+var offerValid = confirm("Is the Expiration still Valid?");
 var premiumMember = confirm("Are you a Premium Member?");
-if (offerExpired === true && (itemsBought > 2) || premiumMember === true) {
-    alert("Congratulations! Discount Valid");
+if (offerValid && (itemsBought > 2 || premiumMember)) {
+    alert("Congratulations! Discount Valid!");
 } else {
-    alert("Sorry Offer Invalid");
+    alert("Sorry Offer Invalid!");
 }
 
