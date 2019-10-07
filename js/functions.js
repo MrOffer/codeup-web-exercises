@@ -76,6 +76,12 @@ console.log(calculateTip(.25, 25.5));
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+var bill = parseInt(prompt("what is the total bill?"));
+var tipperc = parseInt(prompt("what percentage tip do you want to leave?"));
+var tipamount = calculateTip(tipperc, bill);
+alert('Add ' + tipamount )
+
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
