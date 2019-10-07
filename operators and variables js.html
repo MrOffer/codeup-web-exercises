@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Js operators and variables</title>
+</head>
+<body>
+<script>
+    function movieRent(x, y, z) {
+        var dailyFee = 3;
+        return (x * dailyFee) + (y * dailyFee) + (z * dailyFee);
+    }
+console.log(movieRent(3, 5, 1));
+
+function payDay(gh, ah, fh) {
+    var googlePay = 400;
+    var amazonPay = 380;
+    var facebookPay = 350;
+    return (gh * googlePay) + (ah * amazonPay) + (fh * facebookPay);
+}
+console.log(payDay(6, 4, 10));
+
+function studentClassEnrollment(x, y) {
+    var fullClass = x;
+    var scheduleConflict = y;
+    return fullClass == true && scheduleConflict == true;
+}
+console.log(studentClassEnrollment(true, false));
+
+
+function productOffer(x, y, z) {
+    var itemsBought = x;
+    var offerExpired = y;
+    var premiumMember = z;
+    if (offerExpired === false && (itemsBought > 2) || premiumMember) {
+        return true;
+    }
+}
+console.log(productOffer(3, false, true));
+
+    var username = 'codeup';
+    var password = 'notastrongpassword';
+    passwordLength = password.length >= 5 && password.indexOf(username) === -1 && username.length <= 20 && username === username.trim()  && password === password.trim();
+
+</script>
+</body>
+</html>
