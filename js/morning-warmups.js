@@ -77,3 +77,13 @@ function greaterThanFive() {
     return (userNum > 5);
 }
 console.log(greaterThanFive());
+
+function multiply(num, num1) {
+    return num * num1;
+}
+console.log(multiply());
+
+var multiplyby= function(num, num1) {
+    return num * num1;
+};
+multiplyby();

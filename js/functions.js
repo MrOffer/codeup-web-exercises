@@ -109,12 +109,3 @@ console.log(applyDiscount(100, .2))
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-function median(x) {
-    var avg = parseInt(x.join('+') / x.length);
-    return avg.toFixed(1);
-}
-
-console.log(median([1, 2, 3, 4, 5]));
-console.log(median([1, 2, 3]));
-console.log(median([1, 5, 6]));
-console.log(median([1, 2, 5, 6]));
