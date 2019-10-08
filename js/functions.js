@@ -78,10 +78,11 @@ console.log(calculateTip(.25, 25.5));
 
 var bill = parseInt(prompt("what is the total bill?"));
 var tipperc = parseInt(prompt("what percentage tip do you want to leave?"));
-var tipamount = calculateTip(tipperc, bill);
-alert('Add ' + tipamount )
-
-
+var tipdec = tipperc / 100;
+var tipamount = parseInt(calculateTip(tipdec, bill));
+var total = bill + tipamount;
+alert('The tip amount is $' + tipamount );
+alert('Your total with tip is $' + total);
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
@@ -89,6 +90,11 @@ alert('Add ' + tipamount )
  * then display the dollar amount they should tip
  */
 
+function applyDiscount(num, num1) {
+  var discount = num * num1;
+  return num - discount;
+}
+console.log(applyDiscount(100, .2))
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -103,3 +109,12 @@ alert('Add ' + tipamount )
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+function median(x) {
+    var avg = parseInt(x.join('+') / x.length);
+    return avg.toFixed(1);
+}
+
+console.log(median([1, 2, 3, 4, 5]));
+console.log(median([1, 2, 3]));
+console.log(median([1, 5, 6]));
+console.log(median([1, 2, 5, 6]));
