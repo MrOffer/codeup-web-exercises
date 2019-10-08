@@ -97,7 +97,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 
 
-var colorChoice = prompt("Give me a color please");
+/*var colorChoice = prompt("Give me a color please");
 
 switch(colorChoice) {
     case "blue":
@@ -112,7 +112,7 @@ switch(colorChoice) {
         alert(colorChoice + " is Invalid!");
         break;
 }
-
+       */
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
@@ -143,11 +143,29 @@ switch(colorChoice) {
  * return value.
  */
 
+ function calculateTotal(num, num1) {
+       if (num === 1) {
+             var tenPercent = num1 * .1;
+             return num1 - tenPercent;
+         }  else if (num === 2) {
+             var twentyfivePercent = num1 * .25;
+             return num1 - twentyfivePercent;
+         }  else if (num === 3) {
+             var thiryfivePercent = num1 * .35;
+             return num1 - thiryfivePercent;
+         }  else if (num === 4) {
+             var fiftyPercent = num1 * .5;
+             return num1 - fiftyPercent;
+         }  else if (num === 5) {
+             return 0;
+         }  else {
+             return num1;
+         }
+}
 
-
-
-
-
+    console.log(calculateTotal(0, 100));
+    console.log(calculateTotal(4, 100));
+    console.log(calculateTotal(5, 100));
 
 /**
  * TODO:
@@ -156,5 +174,10 @@ switch(colorChoice) {
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
-// Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+//Generate a random number between 0 and 6
+var luckyNumber = Math.floor(Math.random() * 6);
+var totalBill = parseInt(prompt('What is your total Bill?'));
+ alert('Your Lucky Number is ' + luckyNumber);
+ alert('Your total bill before discount is ' + totalBill)
+var discountedBill = calculateTotal(luckyNumber, totalBill);
+ alert('Your Discounted Bill is ' + discountedBill);
