@@ -16,6 +16,32 @@
  * Can you refactor your code to use functions?
  */
 
+var number = confirm('Would you like to enter a number?');
+if (number == true) {
+    var numberGiven = parseInt(prompt("What Number would you like to give me?"));
+} else {
+    alert('Thanks Anyway!');
+}
+if (number == true && numberGiven % 2 === 0) {
+    alert('The number you gave me is even!')
+      }
+if (number == true && numberGiven % 2 === 1)  {
+    alert('The number you gave me is odd!')
+}
+var plus100 = numberGiven + 100;
+
+if (number == true) {
+    alert('The number you gave me plus 100 is ' + plus100);
+}
+if (number == true && numberGiven > 0) {
+    alert('The number you gave me is positive')
+}
+if (number == true && numberGiven < 0) {
+    alert('The number you gave me is negative')
+}
+if (typeof numberGiven === isNaN)     {
+    alert('You did not enter a number please refresh the page');
+}
 /* ########################################################################## */
 
 /**
@@ -36,6 +62,22 @@
  * console.logging the function's return value
  */
 
+function analyzeColor(x) {
+    if (x === 'blue') {
+        alert('blue is the color of the sky')
+    }  else if (x === 'red') {
+        alert('Strawberries are red')
+    }    else if (x === 'cyan') {
+        alert("I dont know anything about cyan")
+    }     else {
+        alert('Your color is Invalid');
+    }
+}
+
+
+
+
+
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -48,11 +90,28 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message everytime you refresh the page
  */
-
+   console.log(analyzeColor(randomColor));
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
+
+
+var colorChoice = prompt("Give me a color please");
+
+switch(colorChoice) {
+    case "blue":
+        alert("blue is the color of the sky");
+        break;
+    case "red":
+        alert("Strawberries are red");
+        break;
+    case "cyan":
+        alert('I dont know anything about cyan');
+    default:
+        alert(colorChoice + " is Invalid!");
+        break;
+}
 
 /**
  * TODO:
@@ -60,7 +119,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-
+        var userColor = prompt('Please Give me a color');
+        analyzeColor(userColor);
 /* ########################################################################## */
 
 /**
@@ -82,6 +142,12 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+
+
+
+
+
+
 
 /**
  * TODO:
