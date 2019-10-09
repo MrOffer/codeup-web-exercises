@@ -87,3 +87,9 @@ var multiplyby= function(num, num1) {
     return num * num1;
 };
 multiplyby();
+
+function helloThere(string = 'Stranger') {
+  return 'Hello there, ' + string + '!';
+}
+var response = prompt('Input string, plox.');
+alert(helloThere(response));
