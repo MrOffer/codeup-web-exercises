@@ -1,7 +1,7 @@
 "use strict";
 
 function sayHello(name) {
-    return "Hello, " + name;
+    return "Hello, " + name +'!';
 }
 /**
  * TODO:
@@ -81,8 +81,9 @@ var tipperc = parseInt(prompt("what percentage tip do you want to leave?"));
 var tipdec = tipperc / 100;
 var tipamount = parseInt(calculateTip(tipdec, bill));
 var total = bill + tipamount;
-alert('The tip amount is $' + tipamount );
-alert('Your total with tip is $' + total);
+alert('With a bill of ' + bill + ', and a tip of ' + tipperc + '%, the tip amount is $' + tipamount + ', with a new total of $' + total);
+
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
