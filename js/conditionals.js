@@ -97,22 +97,22 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 
 
-/*var colorChoice = prompt("Give me a color please");
-
-switch(colorChoice) {
-    case "blue":
-        alert("blue is the color of the sky");
-        break;
-    case "red":
-        alert("Strawberries are red");
-        break;
-    case "cyan":
-        alert('I dont know anything about cyan');
-    default:
-        alert(colorChoice + " is Invalid!");
-        break;
+var colorChoice = prompt("Give me a color please");
+function colors(colorChoice) {
+    switch (colorChoice) {
+        case "blue":
+            return "blue is the color of the sky";
+            break;
+        case "red":
+            return "Strawberries are red";
+            break;
+        case "cyan":
+            return 'I dont know anything about cyan';
+        default:
+            return colorChoice + " is Invalid!";
+            break;
+    }
 }
-       */
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
