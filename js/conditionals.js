@@ -17,31 +17,34 @@
  */
 
 var number = confirm('Would you like to enter a number?');
-if (number == true) {
-    var numberGiven = parseInt(prompt("What Number would you like to give me?"));
+if (number) {
+    var numberGiven = (prompt("Please enter a number."));
 } else {
     alert('Thanks Anyway!');
 }
-if (number == true && numberGiven % 2 === 0) {
-    alert('The number you gave me is even!')
-      }
-if (number == true && numberGiven % 2 === 1)  {
-    alert('The number you gave me is odd!')
-}
-var plus100 = numberGiven + 100;
-
-if (number == true) {
-    alert('The number you gave me plus 100 is ' + plus100);
-}
-if (number == true && numberGiven > 0) {
-    alert('The number you gave me is positive')
-}
-if (number == true && numberGiven < 0) {
-    alert('The number you gave me is negative')
-}
-if (typeof numberGiven === isNaN)     {
+var isNumber = isNaN(numberGiven);
+if (isNumber)     {
     alert('You did not enter a number please refresh the page');
 }
+var userNumber = parseInt(numberGiven);
+if (!isNumber && userNumber % 2 === 0) {
+    alert('The number you gave me is even!')
+      }
+if (!isNumber && userNumber % 2 === 1)  {
+    alert('The number you gave me is odd!')
+}
+var plus100 = userNumber + 100;
+
+if (!isNumber) {
+    alert('The number you gave me plus 100 is ' + plus100);
+}
+if (!isNumber && userNumber > 0) {
+    alert('The number you gave me is positive')
+}
+if (!isNumber && userNumber < 0) {
+    alert('The number you gave me is negative')
+}
+
 /* ########################################################################## */
 
 /**
