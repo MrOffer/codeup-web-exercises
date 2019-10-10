@@ -176,8 +176,10 @@ function colors(colorChoice) {
  */
 //Generate a random number between 0 and 6
 var luckyNumber = Math.floor(Math.random() * 6);
+
 var totalBill = parseInt(prompt('What is your total Bill?'));
- alert('Your Lucky Number is ' + luckyNumber);
- alert('Your total bill before discount is ' + totalBill)
+
+ alert('Your Lucky Number is ' + luckyNumber + "!");
+ alert('Your total bill before discount is ' + totalBill);
 var discountedBill = calculateTotal(luckyNumber, totalBill);
  alert('Your Discounted Bill is ' + discountedBill);

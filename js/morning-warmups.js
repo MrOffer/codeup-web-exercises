@@ -93,3 +93,8 @@ function helloThere(string = 'Stranger') {
 }
 var response = prompt('Input string, plox.');
 alert(helloThere(response));
+
+function arrayLength(x) {
+ return x.length;
+}
+console.log(arrayLength([3, 5, 6, 8]));
