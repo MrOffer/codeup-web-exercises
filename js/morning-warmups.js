@@ -98,3 +98,12 @@ function arrayLength(x) {
  return x.length;
 }
 console.log(arrayLength([3, 5, 6, 8]));
+
+function quotient(x, y) {
+    if (typeof(x) === 'number' && typeof(y) === 'number') {
+        return x / y;
+    } else {
+        return false;
+    }
+}
+console.log(quotient(16, 8));
