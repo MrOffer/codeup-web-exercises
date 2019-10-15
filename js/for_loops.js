@@ -1,16 +1,18 @@
 function showMultiplicationTable(x) {
-    for (var i = 1; i <= 10; i++) {
+    for (var i = 1; i < 11; i++) {
         console.log(i + " x " + x + " = " + i * x);
     }
 }
-console.log(showMultiplicationTable(7));
+
 
 var number = Math.floor(Math.random() * 200) + 20;
-for (var i = 1; i <= 10; i++) {
-    i++;
-    if (number % 2 === 0) {
-        console.log(i++ + number + " is Even");
-    } else if (number % 2 !== 0) {
-          console.log(i++ + number + " is Odd")
-      }
+function oddOrEven() {
+    for (var i = 1; i <= 10; i++) {
+        if (number % 2 === 0) {
+            console.log(++i + number + " is Even");
+        } if (number % 2 !== 0) {
+            console.log(++i + number + " is Odd")
+        }
+    }
 }
+console.log(oddOrEven());
