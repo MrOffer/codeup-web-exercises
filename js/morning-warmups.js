@@ -107,3 +107,9 @@ function quotient(x, y) {
     }
 }
 console.log(quotient(16, 8));
+
+
+function array1(arr) {
+  return arr;
+}
+ console.log(array1([1,2,3,4,5]));
