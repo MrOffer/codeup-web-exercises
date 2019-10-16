@@ -1,8 +1,8 @@
 function showMultiplicationTable(x) {
-    return x + " x " + i + " = " + (x * i);
-
     for (var i = 1; i <= 10; i++) {
-        console.log(showMultiplicationTable(7));
+
+    console.log( x + " x " + i + " = " + (x * i));
+
     }
 }
 
