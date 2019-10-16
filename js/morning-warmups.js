@@ -113,3 +113,4 @@ function array1(arr) {
   return arr;
 }
  console.log(array1([1,2,3,4,5]));
+
