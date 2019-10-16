@@ -74,8 +74,9 @@ function first(x) {
     function second(x) {
     return x[1];
     }
+
      function last(x) {
-         return x[-1];
+         return x[x.length -1];
      }
 
 
