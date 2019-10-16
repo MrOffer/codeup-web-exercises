@@ -14,6 +14,7 @@ function sayHello(name) {
 
 var helloMessage = sayHello("Thomas");
 console.log(helloMessage);
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -25,6 +26,7 @@ console.log(helloMessage);
 
 var myName = "Thomas";
 console.log(sayHello(myName));
+
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
@@ -41,6 +43,7 @@ function isTwo(num) {
     return num === 2;
 }
 console.log(isTwo(random));
+
 /**
  * TODO:
  * Create a function called 'isTwo' that takes a number as a parameter.
@@ -64,6 +67,7 @@ function calculateTip(num, num1) {
     return tip.toFixed(2);
 }
 console.log(calculateTip(.25, 25.5));
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -95,7 +99,8 @@ function applyDiscount(num, num1) {
   var discount = num * num1;
   return num - discount;
 }
-console.log(applyDiscount(100, .2))
+console.log(applyDiscount(100, .2));
+
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -110,3 +115,4 @@ console.log(applyDiscount(100, .2))
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
