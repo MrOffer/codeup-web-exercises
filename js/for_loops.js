@@ -1,3 +1,5 @@
+"use strict";
+
 function showMultiplicationTable(x) {
     for (var i = 1; i <= 10; i++) {
 
@@ -5,24 +7,24 @@ function showMultiplicationTable(x) {
 
     }
 }
+ console.log(showMultiplicationTable(7));
 
 
-
-for (var i = 1; i <= 10; i++) {
-    if (i % 2 === 0) {
-        console.log(Math.floor(Math.random(i) * 180) + 20 + " is even!");
+for (var j = 1; j <= 10; j++) {
+    if (j % 2 === 0) {
+        console.log(Math.floor(Math.random(j) * 180) + 20 + " is even!");
     }
     else {
-        console.log(Math.floor(Math.random(i) *  180) + 20 + " is odd!");
+        console.log(Math.floor(Math.random(j) *  180) + 20 + " is odd!");
     }
 }
 
 
-for (var i = 1; i < 10; i += 1){
+for (var a = 1; a < 10; a += 1){
     var output = "";
 
-    for (var j = 0; j < i; j += 1){
-        output += i;
+    for (var b = 0; b < a; b += 1){
+        output += a;
     }
 
     console.log(output);
@@ -30,8 +32,8 @@ for (var i = 1; i < 10; i += 1){
 
 
 
-for (var i = 100; i >=5; i -= 5){
-    console.log(i);
+for (var c = 100; c >=5; c -= 5){
+    console.log(c);
 }
 
 

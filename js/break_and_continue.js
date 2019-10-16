@@ -1,5 +1,8 @@
+"use strict";
+
+
 var userInput = prompt("Please input an odd number between 1 and 50");
-var odd = i % 2 !==0;
+var odd = i % 2 !== 0;
 console.log("Number to skip is: " + userInput);
 
 for (var i = 1; i <= 50; i++){
