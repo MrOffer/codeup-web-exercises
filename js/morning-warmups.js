@@ -114,3 +114,7 @@ function array1(arr) {
 }
  console.log(array1([1,2,3,4,5]));
 
+function eight(x) {
+    return x.length >= 8 && typeof x === "string";
+}
+ console.log(eight(76868556));
