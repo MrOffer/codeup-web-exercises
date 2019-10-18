@@ -118,3 +118,10 @@ function eight(x) {
     return x.length >= 8 && typeof x === "string";
 }
  console.log(eight(76868556));
+
+function floatnumber(x) {
+    if (typeof x === 'number'  && !isNaN(x)) {
+        return Math.floor(x);
+    }
+}
+console.log(floatnumber(6.32));
