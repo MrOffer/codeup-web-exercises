@@ -51,19 +51,30 @@
      */
 
     var shoppers = [
-        {name: 'Cameron', amount: 180},
-        {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
+        {
+            name: 'Cameron',
+            amount: 180
+        },
+        {
+            name: 'Ryan',
+            amount: 250
+        },
+        {
+            name: 'George',
+            amount: 320
+        }
     ];
 
-    shoppers.forEach(function(shopper) {
-        shopper.amount.forEach(function(amounts) {
-           if (shopper.amount > 200) {
-               console.log(shoppers.name + ", " + shopper.amount);
-           }
-        });
-    });
 
+    shoppers.forEach(function (shopper) {
+        if (shopper.amount > 200){
+            var discount = shopper.amount * .12;
+            var total = shopper.amount - discount;
+            console.log(shopper.name + ": " + shopper.amount + ", " + discount + ", " + total);
+        } else {
+            console.log(shopper.name + ": " + shopper.amount);
+        }
+    });
 
 
     /** TODO:
@@ -78,6 +89,8 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+
 
     /**
      * TODO:
