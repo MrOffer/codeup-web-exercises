@@ -30,11 +30,11 @@
      */
 
 
-     function sayHello(x, y) {
-        return "Hello from " + x + " " + y + "!";
-    }
+     person.sayhello = function () {
+        return "Hello from " + this.firstName + " " + this.lastName + "!";
+    };
 
-    console.log(sayHello(person.firstName, person.lastName));
+    console.log(sayHello(person.sayhello()));
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -175,16 +175,24 @@ var books = [
      *   `showBookInfo` function.
      */
 
-    function createBook(x, y) {
-        y.join()
-    books.push(x, y);
+    function createBook(x, y, z) {
+        var book = {};
+        book.title = x;
+        book.author = {
+            firstName: y,
+            lastName: z
+    };
+     return book;
     }
+
+    books.push(createBook("It","Stephen", "King"));
+
 
 function showBookInfo(books) {
     books.forEach(function (book, index) {
         console.log(book.title+ ", " + index + ", " + book.author.firstName + " " + book.author.lastName);
     });
 }
- console.log(showBookInfo({title: "the shinning", author:{ firstName:"Stephen", lastName:"king"}}));
+console.log(showBookInfo());
 
 })();
