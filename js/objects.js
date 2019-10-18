@@ -72,7 +72,7 @@
             var total = shopper.amount - discount;
             console.log(shopper.name + ": " + shopper.amount + ", " + discount + ", " + total);
         } else {
-            console.log(shopper.name + ": " + shopper.amount);
+            console.log(shopper.name + ": " + shopper.amount + " " + 0 + " discount");
         }
     });
 
@@ -90,7 +90,43 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
-
+var books = [
+        {
+            title: "Educated",
+            author:  {
+                firstName: "Tara",
+                lastName: "Westover"
+            }
+        },
+        {
+            title:"The Reckoning",
+            author: {
+                firstName: "John",
+                lastName: "Grisham"
+            }
+        },
+        {
+            title: "Cook like a Pro",
+            author: {
+                firstName: "Ina",
+                lastName: "Garten"
+            }
+        },
+        {
+            title: "There There",
+            author: {
+                firstName: "Tommy",
+                lastName: "Orange"
+            }
+        },
+        {
+            title: "The soul of America",
+            author: {
+                firstName: "Jon",
+                lastName: "Meacham"
+            }
+        }
+    ];
 
     /**
      * TODO:
@@ -117,6 +153,17 @@
      *      ...
      */
 
+    books.forEach(function (book, index) {
+        console.log("Book # ", index + 1);
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+        console.log("---");
+    });
+
+    console.log("...");
+
+
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -127,5 +174,17 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    function createBook(x, y) {
+        y.join()
+    books.push(x, y);
+    }
+
+function showBookInfo(books) {
+    books.forEach(function (book, index) {
+        console.log(book.title+ ", " + index + ", " + book.author.firstName + " " + book.author.lastName);
+    });
+}
+ console.log(showBookInfo({title: "the shinning", author:{ firstName:"Stephen", lastName:"king"}}));
 
 })();
