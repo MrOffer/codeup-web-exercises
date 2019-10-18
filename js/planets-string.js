@@ -11,7 +11,7 @@
      * console.log planetsArray to check your work
      */
 
-    planetsArray = planetsString.split(',');
+    planetsArray = planetsString.split('|');
      console.log(planetsArray);
 
     /**
@@ -20,8 +20,8 @@
      * results. Why might this be useful?
      */
 
-    var planetsStrings = planetsString.split("|").join("<br>");
-    console.log(planetsStrings);
+    var planetsBr = planetsArray.join("<br>");
+    document.write(planetsBr);
 
     /** BONUS:
      * Create another string that would display your planets in an undordered
@@ -29,4 +29,10 @@
      * string, and <li> tags around each planet.
      */
 
+    var planetsUl = "<ul>";
+    planetsArray.forEach(function (planet) {
+        planetsUl += "<li>" +planet + "</li>"
+    });
+    planetsUl += "</ul>";
+    document.write(planetsUl);
 })();
