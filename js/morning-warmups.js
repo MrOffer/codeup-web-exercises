@@ -125,3 +125,11 @@ function floatnumber(x) {
     }
 }
 console.log(floatnumber(6.32));
+
+function countUp(x){
+    for (var i = 1; i <= x; i++ ){
+        console.log(i);
+    }
+    return "done counting";
+}
+console.log(countUp(10));
