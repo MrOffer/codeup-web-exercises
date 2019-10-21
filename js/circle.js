@@ -33,27 +33,8 @@
 
     console.log("=======================================================");
     // TODO: Change the radius of the circle to 5.
-circle = {
-    radius: 5,
-    getArea: function () {
-        // TODO: complete this method
-        // hint: area = pi * radius^2
-        var area = Math.pow(circle.radius, 2) * Math.PI;
-        return area;// TODO: return the proper value
-    },
+circle.radius = 5;
 
-    logInfo: function (doRounding) {
-        // TODO: complete this method.
-        if (doRounding) {
-            console.log(Math.round(circle.getArea()));
-        } else {
-            // If doRounding is true, round the result to the nearest integer.
-            // Otherwise, output the complete value
-
-            console.log("Area of a circle with radius: " + this.radius + ", is: " + circle.getArea());
-        }
-    }
-};
     // log info about the circle
     console.log("Raw circle information");
     circle.logInfo(false);
