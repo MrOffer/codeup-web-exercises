@@ -34,7 +34,7 @@
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
 
-        mainHeader.innerHTML= "JavScript is Cool";
+        mainHeader.innerHTML = "JavScript is Cool";
 
         // TODO: Uncomment the next line and get the sub header element by id
 
@@ -45,21 +45,20 @@
         subHeader.style.color = "blue";
 
         // TODO: Uncomment the next line and get all list items
+
         var listItems = document.getElementsByTagName('li');
-         for (var i = 0; i < listItems.length; i++) {
-            return listItems[i];
-        }
+
 
         // TODO: Set text color on every other list item to grey
 
-
-        listItems.style.color = "grey";
+        listItems[1].style.color = "grey";
+        listItems[3].style.color = "grey";
 
 
         // TODO: Set text color of li with dbid = 1 to blue
 
-        var blue = document.getElementsByTagName("li")[0];
-        blue.style.color = "blue";
+        var blue = document.getElementsByTagName("li");
+        blue[0].style.color = "blue";
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
 
@@ -67,7 +66,7 @@
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
 
-        subParagraphs.innerText = "Mission Accomplished!";
+        subParagraphs[0].innerText = "Mission Accomplished!";
 
     })();
 </script>
