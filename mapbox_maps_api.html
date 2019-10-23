@@ -42,7 +42,7 @@
         {
             name: "Alamo Springs Cafe",
             address: '107 Alamo Rd, Fredericksburg, TX 78624',
-            menu: 'https://www.places.singleplatform.com',
+            menu: 'http://places.singleplatform.com/alamo-springs-cafe/menu?ref=google',
             phone: '(830) 990-8004'
         },
         {
@@ -55,7 +55,7 @@
         {
             name: "Mague's Cafe",
             address: '934 N Main St, Boerne, TX 78006',
-            menu: 'https://www.boernemenu.com/magues-cafe/',
+            menu: 'https://www.boernemenu.com/magues-cafe',
             phone: '(830) 249-9168'
         }
     ];
@@ -66,7 +66,7 @@
                      color: "limegreen"
                  };
                  var popup = new mapboxgl.Popup({offset: 25})
-                     .setHTML(restaurant.name + ", " + restaurant.menu + ", " + restaurant.phone);
+                     .setHTML("<h2>"+restaurant.name+"</h2>"  + "<br>" + restaurant.address + "<br>" +"<a href='"+ restaurant.menu+"' target='_blank'>" + restaurant.menu + "</a>"+ "<br>" + restaurant.phone);
 
                  new mapboxgl.Marker(markerOptions)
                      .setLngLat(result)
