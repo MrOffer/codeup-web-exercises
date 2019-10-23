@@ -133,3 +133,11 @@
 //     return "done counting";
 // }
 // console.log(countUp(10));
+ 
+function createPersonObject(a,b) {
+    var c = {};
+     c.name = a;
+     c.age = b;
+    return c;
+}
+console.log(createPersonObject("Thomas", 37));
