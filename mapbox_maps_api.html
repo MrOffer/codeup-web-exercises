@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Second Mapbox Map</title>
+    <!-- Mapbox CSS -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- Custom CSS -->
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>My Second Mapbox Map!</h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<!-- Mapbox JS -->
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script>
+    mapboxgl.accessToken = mapBoxToken;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/navigation-preview-night-v2',
+        zoom: 10,
+    });
+    geocode( "Waring, TX, 78074", mapBoxToken)
+        .then(function (result) {
+            map.setCenter(result);
+        });
+
+    geocode( "107 Alamo Rd, Fredericksburg, TX 78624", mapBoxToken)
+        .then(function (result) {
+            var markerOptions = {
+                color: "limegreen"
+            };
+            var popup = new mapboxgl.Popup({offset: 25})
+                .setText('Alamo Springs Cafe');
+
+            new mapboxgl.Marker(markerOptions)
+                .setLngLat(result)
+                .addTo(map)
+                .setPopup(popup);
+        }),
+
+    geocode( "1022 N Main St, Boerne, TX 78006", mapBoxToken)
+                .then(function (result) {
+                    var markerOptions = {
+                        color: "red"
+                    };
+                    var popup = new mapboxgl.Popup({offset: 25})
+                        .setText('Broken Stone Pizza Co.');
+
+                    new mapboxgl.Marker(markerOptions)
+                        .setLngLat(result)
+                        .addTo(map)
+                        .setPopup(popup)
+                        .flyTo();
+                });
+
+    geocode( "934 N Main St, Boerne, TX 78006", mapBoxToken)
+        .then(function (result) {
+            var markerOptions = {
+                color: "yellow"
+            };
+            var popup = new mapboxgl.Popup({offset: 25})
+                .setText("Mague's Cafe");
+
+            new mapboxgl.Marker(markerOptions)
+                .setLngLat(result)
+                .addTo(map)
+                .setPopup(popup)
+                .flyTo();
+        });
+
+</script>
+<!-- Custom JS -->
+
+</body>
+</html>
