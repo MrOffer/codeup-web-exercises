@@ -38,49 +38,44 @@
             map.setCenter(result);
         });
 
-    geocode( "107 Alamo Rd, Fredericksburg, TX 78624", mapBoxToken)
-        .then(function (result) {
-            var markerOptions = {
-                color: "limegreen"
-            };
-            var popup = new mapboxgl.Popup({offset: 25})
-                .setText('Alamo Springs Cafe');
+    var restaurants = [
+        {
+            name: "Alamo Springs Cafe",
+            address: '107 Alamo Rd, Fredericksburg, TX 78624',
+            menu: 'https://www.places.singleplatform.com',
+            phone: '(830) 990-8004'
+        },
+        {
+            name: 'Broken Stone Pizza Co.',
+            address: '1022 N Main St, Boerne, TX 78006',
+            menu: 'https://www.brokenstonepizzaco.com/boerne-menu',
+            phone: '(830) 331-9020'
 
-            new mapboxgl.Marker(markerOptions)
-                .setLngLat(result)
-                .addTo(map)
-                .setPopup(popup);
-        }),
+        },
+        {
+            name: "Mague's Cafe",
+            address: '934 N Main St, Boerne, TX 78006',
+            menu: 'https://www.boernemenu.com/magues-cafe/',
+            phone: '(830) 249-9168'
+        }
+    ];
+     restaurants.forEach(function (restaurant){
+         geocode( restaurant.address, mapBoxToken)
+             .then(function (result) {
+                 var markerOptions = {
+                     color: "limegreen"
+                 };
+                 var popup = new mapboxgl.Popup({offset: 25})
+                     .setHTML(restaurant.name + ", " + restaurant.menu + ", " + restaurant.phone);
 
-    geocode( "1022 N Main St, Boerne, TX 78006", mapBoxToken)
-                .then(function (result) {
-                    var markerOptions = {
-                        color: "red"
-                    };
-                    var popup = new mapboxgl.Popup({offset: 25})
-                        .setText('Broken Stone Pizza Co.');
+                 new mapboxgl.Marker(markerOptions)
+                     .setLngLat(result)
+                     .addTo(map)
+                     .setPopup(popup);
+             })
+    });
 
-                    new mapboxgl.Marker(markerOptions)
-                        .setLngLat(result)
-                        .addTo(map)
-                        .setPopup(popup)
-                        .flyTo();
-                });
 
-    geocode( "934 N Main St, Boerne, TX 78006", mapBoxToken)
-        .then(function (result) {
-            var markerOptions = {
-                color: "yellow"
-            };
-            var popup = new mapboxgl.Popup({offset: 25})
-                .setText("Mague's Cafe");
-
-            new mapboxgl.Marker(markerOptions)
-                .setLngLat(result)
-                .addTo(map)
-                .setPopup(popup)
-                .flyTo();
-        });
 
 </script>
 <!-- Custom JS -->
