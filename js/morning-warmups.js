@@ -133,11 +133,27 @@
 //     return "done counting";
 // }
 // console.log(countUp(10));
- 
-function createPersonObject(a,b) {
-    var c = {};
-     c.name = a;
-     c.age = b;
-    return c;
+
+// function createPersonObject(a,b) {
+//     var c = {};
+//      c.name = a;
+//      c.age = b;
+//     return c;
+// }
+// console.log(createPersonObject("Thomas", 37));
+
+function fizzbuzz(num) {
+    for (i = 1; i <= num; i++){
+        if(i % 15 === 0){
+            console.log("fizz Buzz");
+        } else if (i % 3 === 0){
+            console.log("fizz");
+        } else if (i % 5 === 0){
+            console.log("buzz");
+        } else {
+            console.log(i);
+        }
+    }
+return "finished!";
 }
-console.log(createPersonObject("Thomas", 37));
+console.log(fizzbuzz(50));
