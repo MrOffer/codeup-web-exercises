@@ -166,3 +166,21 @@ function five(x) {
 console.log(five("five"));
 console.log(five("four"));
 console.log(five(5));
+
+// var i = 0;
+// while(i <= 10) {
+//     console.log(i);
+//     band.shred();
+//
+//
+//     i++;
+// }
+// var band ={};
+// band.shred = function() {
+//     console.log('RAAAAAAAAAA!!!!');
+// };
+//
+// band.shred();
+
+
+
