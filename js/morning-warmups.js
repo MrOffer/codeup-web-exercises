@@ -142,18 +142,45 @@
 // }
 // console.log(createPersonObject("Thomas", 37));
 
-function fizzbuzz(num) {
-    for (i = 1; i <= num; i++){
-        if(i % 15 === 0){
-            console.log("fizz Buzz");
-        } else if (i % 3 === 0){
-            console.log("fizz");
-        } else if (i % 5 === 0){
-            console.log("buzz");
-        } else {
-            console.log(i);
-        }
+// function fizzbuzz(num) {
+//     for (i = 1; i <= num; i++){
+//         if(i % 15 === 0){
+//             console.log("fizz Buzz");
+//         } else if (i % 3 === 0){
+//             console.log("fizz");
+//         } else if (i % 5 === 0){
+//             console.log("buzz");
+//         } else {
+//             console.log(i);
+//         }
+//     }
+// return "finished!";
+// }
+// console.log(fizzbuzz(50));
+
+function five(x) {
+    if (x === "five") {
+        return 5;
     }
-return "finished!";
 }
-console.log(fizzbuzz(50));
+console.log(five("five"));
+console.log(five("four"));
+console.log(five(5));
+
+// var i = 0;
+// while(i <= 10) {
+//     console.log(i);
+//     band.shred();
+//
+//
+//     i++;
+// }
+// var band ={};
+// band.shred = function() {
+//     console.log('RAAAAAAAAAA!!!!');
+// };
+//
+// band.shred();
+
+
+
