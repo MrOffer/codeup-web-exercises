@@ -182,5 +182,38 @@ console.log(five(5));
 //
 // band.shred();
 
+var shoppingCarts = [
+    {
+        apples: 8,
+        bananas: 2,
+        oranges: 4,
+        grapes: 24
+    }, {
+        apples: 3,
+        bananas: 6,
+        oranges: 8,
+        grapes: 12
+    } , {
+        apples: 0,
+        bananas: 12,
+        oranges: 0,
+        grapes: 0
+    }, {
+        apples: 4,
+        bananas: 0,
+        oranges: 12,
+        grapes: 10
+    }
+];
 
+function mostOranges(x) {
+    var winner = x[0];
+    x.forEach(function (cart) {
+        if (cart.oranges > winner.oranges){
+            winner = cart;
+        }
+    });
+    return winner;
+}
 
+console.log(mostOranges(shoppingCarts));
