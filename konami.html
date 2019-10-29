@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+<p> Please enter your code: </p>
+<form>
+    <input type="text" id="textfield" name="textfield" placeholder="Type Code Here"/>
+</form>
+<script src="js/jquery-2.2.4.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    "use strict";
+    $('#textfield').keyup(function() {
+       var codeSound= new Audio('img/439890__simonbay__lushlife-gameover.wav');
+       codeSound.play();
+        alert('You have added 30 lives!');
+        $('h1').css({'background-image':'url("img/KONAMI.jpeg")','height':'200px', "opacity":'.7', 'background-repeat':"no-repeat", 'background-size':'cover', 'margin':'0'});
+        $('body').css({'background-image': 'url("img/konami-logo.0.0.jpg")', 'background-repeat':"no-repeat", 'background-size':'cover', 'color':'yellow'});
+    });
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+    });
+
+</script>
+</body>
+</html>
