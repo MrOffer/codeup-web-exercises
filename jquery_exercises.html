@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery</title>
+</head>
+<body>
+<h1 id="heading" class="writing">Hunting Needs</h1>
+
+ <p id="par" class="writing">You will need to get these essentials to go hunting!</p>
+
+     <ul id="ul" class="writing">Hunting Equipment</ul>
+        <li id="weapon" class="equipment">Weapon of choice</li>
+        <li id="clothing" class="equipment">Camouflage clothing</li>
+        <li id="boots" class="equipment">Boots</li>
+        <li id="gloves" class="equipment">Gloves</li>
+        <li id="binos" class="equipment">Binoculars</li>
+        <li id="knife" class="equipment">Knives</li>
+
+<div id="bottom" class="writing">Some of these might seem unnecessary, but you will regret not having them when you go!</div>
+
+<script src="js/jquery-2.2.4.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function () {
+    $('li').css('font-size', '20px');
+    $('h1, p, li').css('background-color','yellow');
+   var contents = $('h1').html();
+   alert(contents);
+});
+</script>
+</body>
+</body>
+</html>
