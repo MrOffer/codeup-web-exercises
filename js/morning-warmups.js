@@ -158,14 +158,14 @@
 // }
 // console.log(fizzbuzz(50));
 
-function five(x) {
-    if (x === "five") {
-        return 5;
-    }
-}
-console.log(five("five"));
-console.log(five("four"));
-console.log(five(5));
+// function five(x) {
+//     if (x === "five") {
+//         return 5;
+//     }
+// }
+// console.log(five("five"));
+// console.log(five("four"));
+// console.log(five(5));
 
 // var i = 0;
 // while(i <= 10) {
@@ -181,39 +181,78 @@ console.log(five(5));
 // };
 //
 // band.shred();
-
-var shoppingCarts = [
+//
+// var shoppingCarts = [
+//     {
+//         apples: 8,
+//         bananas: 2,
+//         oranges: 4,
+//         grapes: 24
+//     }, {
+//         apples: 3,
+//         bananas: 6,
+//         oranges: 8,
+//         grapes: 12
+//     } , {
+//         apples: 0,
+//         bananas: 12,
+//         oranges: 0,
+//         grapes: 0
+//     }, {
+//         apples: 4,
+//         bananas: 0,
+//         oranges: 12,
+//         grapes: 10
+//     }
+// ];
+//
+// function mostOranges(x) {
+//     var winner = x[0];
+//     x.forEach(function (cart) {
+//         if (cart.oranges > winner.oranges){
+//             winner = cart;
+//         }
+//     });
+//     return winner;
+// }
+//
+// console.log(mostOranges(shoppingCarts));
+//
+//
+var students = [
     {
-        apples: 8,
-        bananas: 2,
-        oranges: 4,
-        grapes: 24
-    }, {
-        apples: 3,
-        bananas: 6,
-        oranges: 8,
-        grapes: 12
-    } , {
-        apples: 0,
-        bananas: 12,
-        oranges: 0,
-        grapes: 0
-    }, {
-        apples: 4,
-        bananas: 0,
-        oranges: 12,
-        grapes: 10
+        name: "Mary",
+        grade: 10,
+        gpa: 3.7,
+        isRegistered: true
+    },
+    {
+        name: "Tim",
+        grade: 12,
+        gpa: 3.2,
+        isRegistered: false
+    },
+    {
+        name: "Ellie",
+        grade: 9,
+        gpa: 4.0,
+        isRegistered: false
+    },
+    {
+        name: "Alex",
+        grade: 10,
+        gpa: 3.9,
+        isRegistered: true
     }
-];
+]
 
-function mostOranges(x) {
-    var winner = x[0];
-    x.forEach(function (cart) {
-        if (cart.oranges > winner.oranges){
-            winner = cart;
-        }
-    });
-    return winner;
+function notRegistered(students) {
+var arr = [];
+students.forEach(function (student) {
+    if (student.isRegistered === false){
+        arr.push(student);
+    }
+});
+return arr;
 }
-
-console.log(mostOranges(shoppingCarts));
+console.log(notRegistered(students));
