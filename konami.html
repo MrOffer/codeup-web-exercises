@@ -5,6 +5,7 @@
 </head>
 <body>
 <h1>Konami Code</h1>
+<p class="lives">Lives: 0</p>
 <p> Please enter your code: </p>
 
 <script src="js/jquery-2.2.4.js"></script>
@@ -56,6 +57,7 @@
         alert('You have added 30 lives!');
         $('h1').css({'background-image':'url("img/KONAMI.jpeg")','height':'200px', "opacity":'.7', 'background-repeat':"no-repeat", 'background-size':'cover', 'margin':'0'});
         $('body').css({'background-image': 'url("img/konami-logo.0.0.jpg")', 'background-repeat':"no-repeat", 'background-size':'cover', 'color':'yellow'});
+        $('.lives').html('Lives: 30')
     };
 
     $(document).keyup(function(event){
