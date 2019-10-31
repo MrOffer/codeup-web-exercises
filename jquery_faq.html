@@ -3,54 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <title>National Parks FAQ's</title>
+    <style>
+        .invisible{
+            visibility: hidden;
+        }
+        .bgYellow{
+            background-color: yellow;
+        }
+        .bold{
+            font-weight: bold;
+        }
+        .fontBlue{
+            color: blue;
+        }
+    </style>
 </head>
 <body>
 <h1>National Parks FAQ's</h1>
 <a href="">Hide dd's</a>
 <dl>
-    <dt>How many employees are in the National Park Service?</dt>
-    <dd>Permanent, temporary, and seasonal employees: More than 20,000
-        Volunteers: More than 315,000 in 2017</dd>
-    <dt>How many areas are in the National Park System?</dt>
-    <dd>The system includes 419 areas covering more than 85 million acres in every state, the District of Columbia, American Samoa, Guam, Puerto Rico, and the Virgin Islands. These areas include national parks, monuments, battlefields, military parks, historical parks, historic sites, lakeshores, seashores, recreation areas, scenic rivers and trails, and the White House.</dd>
-    <dt>How many people visit the national parks?</dt>
-    <dd>Total recreation visitors to the national parks in 2018: 318,211,833.</dd>
-    <dt>Can I bring my pet to a national park?</dt>
-    <dd>Some national parks welcome pets—in developed areas, on many trails and campgrounds, and in some lodging facilities. </dd>
-    <dt>What do I need to know about driving off road in national parks?</dt>
-    <dd>Before you head out, check with the national parks that you intend to visit. In many national parks, off-road driving is illegal. Where off-road driving is allowed, the National Park Service regulates it.</dd>
-    <dt>How do I make reservations for camping/lodging in national parks?</dt>
-    <dd>For campground reservations, visit Recreation.gov. Not all parks participate in this service; many campgrounds are first come, first served.</dd>
-    <dt>How do I reserve a tour in a park?</dt>
-    <dd>You can book some park tours through Recreation.gov such as WWII Valor in the Pacific (Pearl Harbor), many Mammoth Cave National Park cave tours, Independence National Historical Park tours, and more. Not all parks participate in this reservation service.</dd>
-    <dt>Can I bring my service dog to a national park?</dt>
-    <dd>Yes, service dogs are legally permitted anywhere in a park that visitors can go.</dd>
-    <dt>Where can I find a park map?</dt>
-    <dd>You can view maps on specific park websites or download maps from the Harpers Ferry Center map collection.</dd>
-    <dt>How do I obtain a park entrance pass?</dt>
-    <dd>Fewer than one-third of the national parks charge entrance fees. You can obtain park entrance passes by visiting a park site that charges an entrance fee. Entrance fee sites have passes available; we recommend calling a park prior to your visit.</dd>
+    <dt class="dt">How many employees are in the National Park Service?</dt>
+    <dd class="dd">Permanent, temporary, and seasonal employees: More than 20,000 Volunteers: More than 315,000 in 2017</dd>
+    <dt class="dt">How many areas are in the National Park System?</dt>
+    <dd class="dd">The system includes 419 areas covering more than 85 million acres in every state, the District of Columbia, American Samoa, Guam, Puerto Rico, and the Virgin Islands. These areas include national parks, monuments, battlefields, military parks, historical parks, historic sites, lakeshores, seashores, recreation areas, scenic rivers and trails, and the White House.</dd>
+    <dt class="dt">How many people visit the national parks?</dt>
+    <dd class="dd">Total recreation visitors to the national parks in 2018: 318,211,833.</dd>
+    <dt class="dt">Can I bring my pet to a national park?</dt>
+    <dd class="dd">Some national parks welcome pets—in developed areas, on many trails and campgrounds, and in some lodging facilities. </dd>
+    <dt class="dt">What do I need to know about driving off road in national parks?</dt>
+    <dd class="dd">Before you head out, check with the national parks that you intend to visit. In many national parks, off-road driving is illegal. Where off-road driving is allowed, the National Park Service regulates it.</dd>
+    <dt class="dt">How do I make reservations for camping/lodging in national parks?</dt>
+    <dd class="dd">For campground reservations, visit Recreation.gov. Not all parks participate in this service; many campgrounds are first come, first served.</dd>
+    <dt class="dt">How do I reserve a tour in a park?</dt>
+    <dd class="dd">You can book some park tours through Recreation.gov such as WWII Valor in the Pacific (Pearl Harbor), many Mammoth Cave National Park cave tours, Independence National Historical Park tours, and more. Not all parks participate in this reservation service.</dd>
+    <dt class="dt">Can I bring my service dog to a national park?</dt>
+    <dd class="dd">Yes, service dogs are legally permitted anywhere in a park that visitors can go.</dd>
+    <dt class="dt">Where can I find a park map?</dt>
+    <dd class="dd">You can view maps on specific park websites or download maps from the Harpers Ferry Center map collection.</dd>
+    <dt class="dt">How do I obtain a park entrance pass?</dt>
+    <dd class="dd">Fewer than one-third of the national parks charge entrance fees. You can obtain park entrance passes by visiting a park site that charges an entrance fee. Entrance fee sites have passes available; we recommend calling a park prior to your visit.</dd>
 </dl>
+<input class="button" type="submit">
 
+<h3 id="archesHeading">Arches</h3>
+<ul id="archesFacts">
+    <li>Arches National Park is located in southeast Utah</li>
+    <li>April 12, 1929 - President Herbert Hoover signs Presidential Proclamation No. 1875 establishing Arches National Monument.</li>
+    <li>There are lots of petroglyphs (pecked images) and pictographs (painted ones) on the rocks</li>
+    <li>There are over 2,000 documented arches in the park, ranging from sliver-thin cracks to spans greater than 300 feet</li>
+</ul>
+<h3>Badlands</h3>
+<ul id="badlandFacts">
+    <li>Badlands National Park is in South Dakota.</li>
+    <li>Its dramatic landscapes span layered rock formations, steep canyons and towering spires. Bison, bighorn sheep and prairie dogs inhabit its sprawling grasslands.</li>
+    <li>Ancient mammals such as the rhino, horse, and saber-toothed cat once roamed here.</li>
+    <li>Contains one of the world’s richest fossil beds.</li>
+</ul>
+<h3>Everglades</h3>
+<ul id="evergladeFacts">
+    <li>Everglades National Park is a 1.5-million-acre wetlands preserve on the southern tip of the U.S. state of Florida</li>
+    <li>is made up of coastal mangroves, sawgrass marshes and pine flatwoods. </li>
+    <li>Among the Everglades' hundreds of wildlife species are the endangered leatherback turtle, Florida panther and West Indian manatee.</li>
+    <li>In 1947,Everglades National Park officially opened</li>
+</ul>
 <script src="js/jquery-2.2.4.js"></script>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
-$('dd').addClass("invisible");
+
 $('a').click(function (event) {
     event.preventDefault();
-    $('.invisible').css("visibility", "hidden");
+    $('dd').toggleClass("invisible");
 });
-$('a').dblclick(function (event) {
+
+$('.dt').click(function () {
+    $(this).toggleClass('bgYellow');
+});
+$('.button').click(function (event) {
     event.preventDefault();
-    $('.invisible').css("visibility", "");
+    $('#evergladeFacts').children().last().toggleClass("bgYellow");
+    $('#archesFacts').children().last().toggleClass("bgYellow");
+    $('#badlandFacts').children().last().toggleClass("bgYellow");
 });
-$('dt').click(function (event) {
-    event.preventDefault();
-    $(this).css('background-color', 'yellow');
+$('h3').click(function () {
+ $(this).next(2).toggleClass('bold');
 });
-$('dt').dblclick(function (event) {
-    event.preventDefault();
-    $(this).css('background-color', '');
-});
+
+$('li').click(function () {
+    $(this).parent().children().first().toggleClass("fontBlue")
+})
 
 </script>
 </body>
