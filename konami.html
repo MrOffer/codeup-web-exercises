@@ -6,7 +6,7 @@
 <body>
 <h1>Konami Code</h1>
 <p class="lives">Lives: 0</p>
-<p> Please enter your code: </p>
+<p class="logo"> Please enter your code: </p>
 
 <script src="js/jquery-2.2.4.js"></script>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -55,9 +55,9 @@
     function activateCheats() {
         new Audio();
         alert('You have added 30 lives!');
-        $('h1').css({'background-image':'url("img/KONAMI.jpeg")','height':'200px', "opacity":'.7', 'background-repeat':"no-repeat", 'background-size':'cover', 'margin':'0'});
-        $('body').css({'background-image': 'url("img/konami-logo.0.0.jpg")', 'background-repeat':"no-repeat", 'background-size':'cover', 'color':'yellow'});
-        $('.lives').html('Lives: 30')
+        $('.logo').css({'background-image':'url("img/KONAMI.jpeg")','opacity': '.7','height':'350px', 'background-repeat':"no-repeat", 'background-size':'cover', 'margin':'0'});
+        $('body').css({'background-image': 'url("img/contra.gif")', 'background-repeat':"no-repeat", 'background-size':'cover', 'color':'yellow'});
+        $('.lives').html('Lives: 30');
     };
 
     $(document).keyup(function(event){
