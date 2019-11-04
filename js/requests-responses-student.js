@@ -200,33 +200,54 @@ $(document).ready(function(){
      * titles to your html. You may need to create a div and assign a
      * class/id to target it.
      */
+// this variable stores our request
 
-    var requestBooks = $.ajax("data/books.json");
-    requestBooks.done(function (data) {
-        console.log(data);
-        $.each(data, function (index,data) {
-            console.log(data.title);
-            $('#main').append(data.title + '<br>');
+    function generateBooks(){
+        var requestBooks = $.ajax("data/books.json");
+
+        // once request is done.. do this
+        requestBooks.done(function(data){
+
+            console.log(data);
+
+            // iterate over books.json (array of objects)
+            $.each(data,function(index,book){
+
+                var content = "<h2>";
+                content += book.title;
+                content += "</h2>";
+                content += "<h4>";
+                content += book.author;
+                content += "</h4>";
+
+                // log each book title
+                console.log(book.title);
+                $('#main').append(content);
+            });
         });
-    });
-    requestBooks.fail(function (status) {
-        console.log("something went wrong");
-    });
 
+        requestBooks.fail(function(data){
+            console.log("Something went wrong.");
+        });
+    }
 
+    // call the function to generate data on page load
+    generateBooks();
     /*
      * TO DO: Add your favorite book to the end of books.json.
      */
 
-
-
     /*
-     * Bonus: Create a button the refreshes the contents of your html
+     * Bonus: Create a button that refreshes the contents of your html
      * without refreshing the page.
      */
-$("button").click(function () {
-    window.location.reload(true);
-});
 
+    // event listener on refresh button
+    $('#refresh').click(function(){
+        // reset my html to empty string
+        $('#main').html("");
+        // call function to append new book list
+        generateBooks();
+    });
 
 });
