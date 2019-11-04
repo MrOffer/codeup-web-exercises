@@ -30,11 +30,14 @@
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
-    $.ajax("data/inventory.json").done(function(data, status, jqXhr) {
+    inventory.done(function(data, status) {
         alert("AJAX call completed successfully!");
         console.log("Request status: " + status);
         console.log("Data returned from server:");
         console.log(data);
+        $.each(function (index, data) {
+
+        })
 
     });
 
