@@ -25,8 +25,8 @@
     <div class="card bg-dark">
         <img src="" class="card-img-top" alt="weather">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <h5 class="card-title"></h5>
+            <p class="card-text middle"></p>
         </div>
         <div class="card-footer">
             <small class="text-muted">Last updated 3 mins ago</small>
@@ -35,11 +35,10 @@
     <div class="card bg-dark">
         <img src="" class="card-img-top" alt='weather'>
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-        </div>
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
         <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted"></small>
         </div>
     </div>
 </div>
@@ -60,12 +59,21 @@
 <script>
     $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/"+darkSkyKey+"/29.4241,-98.4936").done(function (data) {
         console.log(data);
-        var temperature = parseInt(data.currently.temperature);
-        var day = new Date.prototype.getDay();
-        var date = new Date.prototype.getMonth()
-        var month =
-        $(".card-text").first().append(data.currently.summary + "<br>" + temperature + "°");
-        $(".card-title").first().append(day);
+            var temperatureHigh1 = parseInt(data.daily.data[0].temperatureHigh);
+            var temperatureLow1 = parseInt(data.daily.data[0].temperatureLow);
+            var summary1 = data.daily.data["0"].summary;
+           $(".card-text").first().append(summary1 + "<br>" + "<br>" + "High:" + temperatureHigh1 + "•" + "<br>" +"Low:" + temperatureLow1 + "•");
+
+        var temperatureHigh2 = parseInt(data.daily.data[1].temperatureHigh);
+        var temperatureLow2 = parseInt(data.daily.data[1].temperatureLow);
+        var summary2 = data.daily.data["0"].summary;
+        $(".middle").append(summary2 + "<br>" + "<br>" + "High:" + temperatureHigh2 + "•" + "<br>" +"Low:" + temperatureLow2 + "•");
+
+        var temperatureHigh3 = parseInt(data.daily.data[2].temperatureHigh);
+        var temperatureLow3 = parseInt(data.daily.data[2].temperatureLow);
+        var summary3 = data.daily.data["0"].summary;
+        $(".card-text").last().append(summary3 + "<br>" + "<br>" + "High: " + temperatureHigh3 + "•" + "<br>" +"Low: " + temperatureLow3 + "•");
+
 
     });
 
