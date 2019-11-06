@@ -107,7 +107,12 @@
 
 
         var darkSky = $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lat + "," +
-            long);
+            long).done(function (data) {
+
+
+            $('.card-text').html("");
+            $('.card-title').html("");
+            $('.middle').html("");
 
             var temperatureHigh1 = parseInt(data.daily.data[0].temperatureHigh);
             var temperatureLow1 = parseInt(data.daily.data[0].temperatureLow);
@@ -235,20 +240,25 @@
                     $("img").last().attr("src", "icons/partlycloudynight.svg");
                     break;
             }
-    }
-    getWeather();
-    $("button").click(function () {
-        var userInput = $("input").val();
-        console.log(userInput);
-        geocode(userInput, mapBoxToken)
-            .then(function (result) {
-                console.log(result);
-                marker.setLngLat(result);
-                map.flyTo({center: result});
 
+            $("button").click(function () {
+                var userInput = $("input").val();
+                console.log(userInput);
+                geocode(userInput, mapBoxToken)
+                    .then(function (result) {
+                        console.log(result);
+                        marker.setLngLat(result);
+                        map.flyTo({center: result});
+                        getWeather();
+                    });
             });
+        });
+    }
 
-    })
+    getWeather();
+
+
+
 
 </script>
 </body>
