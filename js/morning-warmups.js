@@ -342,9 +342,14 @@
 //
 
 
-function yourWelcome(x){
-    if (x.gratitude === "thank you"){
-        return "your welcome";
-    }
+// function yourWelcome(x){
+//     if (x.gratitude === "thank you"){
+//         return "your welcome";
+//     }
+// }
+// console.log(yourWelcome({gratitude: "thank you"}));
+
+function random(){
+    return Boolean(Math.floor(Math.random() *2));
 }
-console.log(yourWelcome({gratitude: "thank you"}));
+console.log(random());

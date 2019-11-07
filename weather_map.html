@@ -6,45 +6,49 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
     <link rel="stylesheet" href="css/weather_map.css">
+
 </head>
 <body>
 <nav class="navbar navbar-dark bg-dark">
     <span class="navbar-brand mb-0 h1">Weather Map for </span>
 </nav>
-<div class="card-deck m-5">
+<div class="card-deck m-4">
     <div class="card bg-dark">
-        <img src="" class="card-img-top" alt="weather">
+        <img src="" class="card-img-top " alt="weather">
         <div class="card-body">
             <h5 class="card-title"></h5>
             <p class="card-text"></p>
         </div>
         <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted"></small>
         </div>
     </div>
     <div class="card bg-dark">
-        <img src="" class="card-img-top" alt="weather">
+        <img src="" class="card-img-top mid" alt="weather">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <h5 class="card-title middlet"></h5>
+            <p class="card-text middle"></p>
         </div>
         <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted"></small>
         </div>
     </div>
     <div class="card bg-dark">
         <img src="" class="card-img-top" alt='weather'>
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
         </div>
         <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted"></small>
         </div>
     </div>
 </div>
+<div id="map">
 
-
+</div>
+<input type="text">
+<button type="submit">Search</button>
 
 
 
@@ -58,16 +62,203 @@
 <script src="js/keys.js"></script>
 <script src="js/weather_map.js"></script>
 <script>
-    $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/"+darkSkyKey+"/29.4241,-98.4936").done(function (data) {
-        console.log(data);
-        var temperature = parseInt(data.currently.temperature);
-        var day = new Date.prototype.getDay();
-        var date = new Date.prototype.getMonth()
-        var month =
-        $(".card-text").first().append(data.currently.summary + "<br>" + temperature + "°");
-        $(".card-title").first().append(day);
+
+    mapboxgl.accessToken = mapBoxToken;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/navigation-preview-night-v2',
+        zoom: 10,
+        center: [-98.4916, 29.4252]
+    });
+
+    var markerOptions = {
+        color: "limegreen",
+        draggable: true
+    };
+    var marker = new mapboxgl.Marker(markerOptions)
+        .setLngLat([-98.4861, 29.4260])
+        .addTo(map);
+
+
+        function onDragEnd(){
+        var lngLat = marker.getLngLat();
+
+
+    }
+    marker.on('dragend', function () {
+        var lngLat = marker.getLngLat();
+        $('.card-text').html("");
+        $('.card-title').html("");
+        $('.middle').html("");
+        getWeather();
 
     });
+
+    marker.on('dragend', onDragEnd);
+
+
+    function getWeather() {
+        marker.on('dragend', onDragEnd);
+
+        var lngLat = marker.getLngLat();
+
+        var long = lngLat.lng;
+        var lat = lngLat.lat;
+
+
+        var darkSky = $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lat + "," +
+            long).done(function (data) {
+console.log(data);
+
+            $('.card-text').html("");
+            $('.card-title').html("");
+            $('.middle').html("");
+
+            var temperatureHigh1 = parseInt(data.daily.data[0].temperatureHigh);
+            var temperatureLow1 = parseInt(data.daily.data[0].temperatureLow);
+            var summary1 = data.daily.data[0].summary;
+            var time = new Date(data.daily.data[0].time * 1000);
+            var date = time.toString();
+            var date1 = date.split(" ");
+
+            $(".card-text").first().append(summary1 + "<br>" + "<br>" + "High:" + temperatureHigh1 + "•" + "<br>" + "Low:" + temperatureLow1 + "•");
+            $(".card-title").first().append(date1[0] + ' ' + date1[1] + " " + date1[2]);
+
+            var temperatureHigh2 = parseInt(data.daily.data[1].temperatureHigh);
+            var temperatureLow2 = parseInt(data.daily.data[1].temperatureLow);
+            var summary2 = data.daily.data[1].summary;
+            var time1 = new Date(data.daily.data[1].time * 1000);
+            var date1 = time1.toString();
+            var date11 = date1.split(" ");
+
+            $(".middle").append(summary2 + "<br>" + "<br>" + "High:" + temperatureHigh2 + "•" + "<br>" + "Low:" + temperatureLow2 + "•");
+            $(".middlet").append(date11[0] + ' ' + date11[1] + " " + date11[2]);
+
+            var temperatureHigh3 = parseInt(data.daily.data[2].temperatureHigh);
+            var temperatureLow3 = parseInt(data.daily.data[2].temperatureLow);
+            var summary3 = data.daily.data[2].summary;
+            var time2 = new Date(data.daily.data[2].time * 1000);
+            var date2 = time2.toString();
+            var date22 = date2.split(" ");
+
+            $(".card-text").last().append(summary3 + "<br>" + "<br>" + "High: " + temperatureHigh3 + "•" + "<br>" + "Low: " + temperatureLow3 + "•");
+            $(".card-title").last().append(date22[0] + ' ' + date22[1] + " " + date22[2]);
+
+            switch (data.daily.data[0].icon) {
+                case ("rain"):
+                    $('img').first().attr('src', 'icons/rain.svg');
+                    break;
+                case ("clear-day"):
+                    $("img").first().attr("src", "icons/clearday.png");
+                    break;
+                case ("clear-night"):
+                    $('img').first().attr('src', 'icons/clearnight.png');
+                    break;
+                case ("snow"):
+                    $("img").first().attr("src", "icons/snow.svg");
+                    break;
+                case ("sleet"):
+                    $('img').first().attr('src', 'icons/sleet.png');
+                    break;
+                case ("wind"):
+                    $("img").first().attr("src", "icons/wind.svg");
+                    break;
+                case ("fog"):
+                    $('img').first().attr('src', 'icons/fog.svg');
+                    break;
+                case ("cloudy"):
+                    $("img").first().attr("src", "icons/cloudy.png");
+                    break;
+                case ("partly-cloudy-day"):
+                    $('img').first().attr('src', 'icons/partlycloudyday.svg');
+                    break;
+                case ("partly-cloudy-night"):
+                    $("img").first().attr("src", "icons/partlycloudynight.svg");
+                    break;
+            }
+            switch (data.daily.data[1].icon) {
+                case ("rain"):
+                    $('.mid').attr('src', 'icons/rain.svg');
+                    break;
+                case ("clear-day"):
+                    $(".mid").attr("src", "icons/clearday.png");
+                    break;
+                case ("clear-night"):
+                    $('.mid').attr('src', 'icons/clearnight.png');
+                    break;
+                case ("snow"):
+                    $(".mid").attr("src", "icons/snow.svg");
+                    break;
+                case ("sleet"):
+                    $('.mid').attr('src', 'icons/sleet.png');
+                    break;
+                case ("wind"):
+                    $(".mid").attr("src", "icons/wind.svg");
+                    break;
+                case ("fog"):
+                    $('.mid').attr('src', 'icons/fog.svg');
+                    break;
+                case ("cloudy"):
+                    $(".mid").attr("src", "icons/cloudy.png");
+                    break;
+                case ("partly-cloudy-day"):
+                    $('.mid').attr('src', 'icons/partlycloudyday.svg');
+                    break;
+                case ("partly-cloudy-night"):
+                    $(".mid").attr("src", "icons/partlycloudynight.svg");
+                    break;
+            }
+            switch (data.daily.data[2].icon) {
+                case ("rain"):
+                    $('img').last().attr('src', 'icons/rain.svg');
+                    break;
+                case ("clear-day"):
+                    $("img").last().attr("src", "icons/clearday.png");
+                    break;
+                case ("clear-night"):
+                    $('img').last().attr('src', 'icons/clearnight.png');
+                    break;
+                case ("snow"):
+                    $("img").last().attr("src", "icons/snow.svg");
+                    break;
+                case ("sleet"):
+                    $('img').last().attr('src', 'icons/sleet.png');
+                    break;
+                case ("wind"):
+                    $("img").last().attr("src", "icons/wind.svg");
+                    break;
+                case ("fog"):
+                    $('img').last().attr('src', 'icons/fog.svg');
+                    break;
+                case ("cloudy"):
+                    $("img").last().attr("src", "icons/cloudy.png");
+                    break;
+                case ("partly-cloudy-day"):
+                    $('img').last().attr('src', 'icons/partlycloudyday.svg');
+                    break;
+                case ("partly-cloudy-night"):
+                    $("img").last().attr("src", "icons/partlycloudynight.svg");
+                    break;
+            }
+
+            $("button").click(function () {
+                var userInput = $("input").val();
+                console.log(userInput);
+                geocode(userInput, mapBoxToken)
+                    .then(function (result) {
+                        console.log(result);
+                        marker.setLngLat(result);
+                        map.flyTo({center: result});
+                        getWeather();
+                    });
+            });
+        });
+    }
+
+    getWeather();
+
+
+
 
 </script>
 </body>
