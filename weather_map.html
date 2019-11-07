@@ -108,7 +108,7 @@
 
         var darkSky = $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lat + "," +
             long).done(function (data) {
-
+console.log(data);
 
             $('.card-text').html("");
             $('.card-title').html("");
@@ -148,10 +148,10 @@
                 case ("rain"):
                     $('img').first().attr('src', 'icons/rain.svg');
                     break;
-                case ("clear day"):
+                case ("clear-day"):
                     $("img").first().attr("src", "icons/clearday.png");
                     break;
-                case ("clear night"):
+                case ("clear-night"):
                     $('img').first().attr('src', 'icons/clearnight.png');
                     break;
                 case ("snow"):
@@ -169,10 +169,10 @@
                 case ("cloudy"):
                     $("img").first().attr("src", "icons/cloudy.png");
                     break;
-                case ("partly cloudy day"):
+                case ("partly-cloudy-day"):
                     $('img').first().attr('src', 'icons/partlycloudyday.svg');
                     break;
-                case ("partly cloudy night"):
+                case ("partly-cloudy-night"):
                     $("img").first().attr("src", "icons/partlycloudynight.svg");
                     break;
             }
@@ -180,10 +180,10 @@
                 case ("rain"):
                     $('.mid').attr('src', 'icons/rain.svg');
                     break;
-                case ("clear day"):
+                case ("clear-day"):
                     $(".mid").attr("src", "icons/clearday.png");
                     break;
-                case ("clear night"):
+                case ("clear-night"):
                     $('.mid').attr('src', 'icons/clearnight.png');
                     break;
                 case ("snow"):
@@ -201,10 +201,10 @@
                 case ("cloudy"):
                     $(".mid").attr("src", "icons/cloudy.png");
                     break;
-                case ("partly cloudy day"):
+                case ("partly-cloudy-day"):
                     $('.mid').attr('src', 'icons/partlycloudyday.svg');
                     break;
-                case ("partly cloudy night"):
+                case ("partly-cloudy-night"):
                     $(".mid").attr("src", "icons/partlycloudynight.svg");
                     break;
             }
@@ -212,10 +212,10 @@
                 case ("rain"):
                     $('img').last().attr('src', 'icons/rain.svg');
                     break;
-                case ("clear day"):
+                case ("clear-day"):
                     $("img").last().attr("src", "icons/clearday.png");
                     break;
-                case ("clear night"):
+                case ("clear-night"):
                     $('img').last().attr('src', 'icons/clearnight.png');
                     break;
                 case ("snow"):
@@ -233,10 +233,10 @@
                 case ("cloudy"):
                     $("img").last().attr("src", "icons/cloudy.png");
                     break;
-                case ("partly cloudy day"):
+                case ("partly-cloudy-day"):
                     $('img').last().attr('src', 'icons/partlycloudyday.svg');
                     break;
-                case ("partly cloudy night"):
+                case ("partly-cloudy-night"):
                     $("img").last().attr("src", "icons/partlycloudynight.svg");
                     break;
             }
