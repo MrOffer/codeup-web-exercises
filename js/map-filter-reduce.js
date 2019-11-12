@@ -35,9 +35,26 @@ const users = [
         yearsOfExperience: 9
     }
 ];
+
+ // 2.
+
  let threeLanguages = users.filter(lan => lan.languages.length >= 3);
 console.log(threeLanguages);
+
+// 3.
 
 let email = users.map(n => n.email);
 console.log(email);
 
+// 4.
+
+let experience = users.reduce((a,c) => {return a + c.yearsOfExperience},0);
+console.log(experience);
+
+let averageExperience = experience / users.length;
+console.log(averageExperience);
+
+// 5.
+let longestEmail = users.reduce(function (a,c) {
+    
+},"");
