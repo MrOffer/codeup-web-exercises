@@ -348,8 +348,20 @@
 //     }
 // }
 // console.log(yourWelcome({gratitude: "thank you"}));
+//
+// function random(){
+//     return Boolean(Math.floor(Math.random() *2));
+// }
+// console.log(random());
 
-function random(){
-    return Boolean(Math.floor(Math.random() *2));
+function array(x) {
+    var arr = [];
+    x.forEach(function (e) {
+        if (e % 2 === 0) {
+            arr.push(e);
+        }
+    });
+    return arr;
 }
-console.log(random());
+
+console.log(array([1,2,3,4,5,6,7,8]));
