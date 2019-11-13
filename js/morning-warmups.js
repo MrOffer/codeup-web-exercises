@@ -354,14 +354,15 @@
 // }
 // console.log(random());
 
-function array(x) {
-    var arr = [];
-    x.forEach(function (e) {
-        if (e % 2 === 0) {
-            arr.push(e);
-        }
-    });
-    return arr;
-}
+// function array(x) {
+//     var arr = [];
+//     x.forEach(function (e) {
+//         if (e % 2 === 0) {
+//             arr.push(e);
+//         }
+//     });
+//     return arr;
+// }
+//
+// console.log(array([1,2,3,4,5,6,7,8]));
 
-console.log(array([1,2,3,4,5,6,7,8]));

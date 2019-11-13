@@ -55,7 +55,12 @@ let averageExperience = experience / users.length;
 console.log(averageExperience);
 
 // 5.
-let longestEmail = users.reduce((a,c) => {a.email.length > c.email.length},`${c.emal}`);
+const longestEmail = users.reduce((longestEmail, user) => {
+    if (user.email.length >= longestEmail.length){
+        longestEmail = user.email;
+    }
+    return longestEmail;
+}, '');
 console.log(longestEmail);
 // 6.
 
