@@ -18,7 +18,6 @@ let dateOfLastCommit = username => {
     return fetch(url, event)
         .then(response => response.json())
         .then(data => data[0].created_at);
-
 };
 
 console.log(dateOfLastCommit('MrOffer').then(lastCommitDate =>
