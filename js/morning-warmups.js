@@ -366,3 +366,18 @@
 //
 // console.log(array([1,2,3,4,5,6,7,8]));
 
+const returnsPromise = num => {
+    return new Promise((resolve, reject) => {
+        if (num % 2 === 0) {
+            resolve( `Why yes the number ${num} is even!`);
+        } else {
+            reject(`${num} is not even!`);
+        }
+    })
+};
+
+let random = Math.floor(Math.random()*15)+1;
+
+returnsPromise(random)
+.then(message => console.log(message))
+.catch(message => console.log(message));
